@@ -18,3 +18,14 @@ C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplicatio
 C:\Users\amand_000\Source\Repos\LS\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 C:\Users\amand_000\Source\Repos\LS\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\amand_000\Source\Repos\LS\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\bin\Debug\EntityFramework.dll
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\bin\Debug\EntityFramework.xml
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\obj\Debug\LS.csprojResolveAssemblyReference.cache
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\obj\Debug\LS.View.LunchSwitchProgram.resources
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\obj\Debug\LS.View.LunchSwitchStartpage.resources
+C:\Users\JOELTVA\Documents\Visual Studio 2015\Projects\LS\WindowsFormsApplication1\obj\Debug\LS.csproj.GenerateResource.Cache
