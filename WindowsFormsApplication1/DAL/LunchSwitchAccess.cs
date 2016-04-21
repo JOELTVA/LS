@@ -73,11 +73,11 @@ namespace LS.DAL
             }
         }
 
-        public List<Member> FindAllMembers()
+        public List<Member> FindAllMembers(Member m)
         {
             try
             {
-                List<Member> listMembers = (from u in db.Members select u).ToList();
+                List<Member> listMembers = (from u in db.Members where u != m select u).ToList();
                 return listMembers;
             }
             catch (Exception ex)
@@ -167,11 +167,12 @@ namespace LS.DAL
                 throw ex;
             }
         }
+
         public List<LunchBox> FindAllLunchboxes(Member m)
         {
             try
             {
-                List<LunchBox> listLunchboxes = (from l in db.LunchBoxes where l.MemberId == m.MemberId select l).ToList();
+                List<LunchBox> listLunchboxes = (from l in db.LunchBoxes where l.MemberId != m.MemberId select l).ToList();
                 return listLunchboxes;
             }
             catch (Exception ex)
@@ -192,8 +193,7 @@ namespace LS.DAL
                 throw ex;
             }
         }
-        //Add methods: findAllLunchboxCities, findLunchboxByCity, findLunchboxByCityAndCategory
-        //Don't need own queries only busniess logic that depends on already made queries! 
+
         public List<String> FindAllLunchboxesCitys()
         {
             List<String> cities = new List<String>();

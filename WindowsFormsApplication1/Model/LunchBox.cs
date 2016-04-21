@@ -32,7 +32,7 @@ namespace LS.Model
         [StringLength(255)]
         public string FoodCategory { get; set; }
 
-        public int? Quantity { get; set; }
+        public int Quantity { get; set; }
 
         [System.ComponentModel.Browsable(false)]
         [StringLength(255)]

@@ -90,14 +90,14 @@ namespace LS.View
         {
             try
             {
-               
+
                 textBoxUsernameMyAccount.Text = member.MemberId;
                 textBoxNameMyAccount.Text = member.FullName;
                 textBoxPhoneMyAccount.Text = member.MobileNr;
                 textBoxEmailMyAccount.Text = member.Email;
                 textBoxCityMyAccount.Text = member.City;
-                textBoxDescriptionMyaccount.Text = member.Description;
-                comboBoxFoodCategoryMyaccount.Text = "Vegetarian";
+                textBoxDescriptionMyAccount.Text = member.Description;
+                comboBoxFoodCategoryMyAccount.Text = "Vegetarian";
                 textBoxAverageRatingMyAccount.Text = controller.FindMemberRating(member).ToString();
 
 
@@ -105,17 +105,61 @@ namespace LS.View
                 formatLunchBoxesMyAccount();
                 dataGridViewMyMeetUpsMyAccount.DataSource = controller.FindMembersMeetUps(member);
                 formatMeetUpsMyAccount();
+            }
+            catch (Exception ex)
+            {
+                handleException.HandleExceptions(ex);
+            }
+        }
 
+       private void FillFindPage() {
 
+            try { 
+                //Fill foodCategories
+                this.comboBoxFoodPreferencesFindPage.Items.Clear();
+                string[] foodCategories = new string[6] { "ALL", "Vegetarian", "Chicken", "Beef", "Pork", "Fish" };
+                foreach (var a in foodCategories)
+                {
+                    this.comboBoxFoodPreferencesFindPage.Items.Add(a);
+                }
+                this.comboBoxFoodPreferencesFindPage.SelectedIndex = 0;
 
+                //Fill Cities
+                this.comboBoxCityFindPage.Items.Clear();
+                this.comboBoxCityFindPage.Items.Add("ALL");
+                foreach (var a in controller.FindAllLunchboxesCitys())
+                {
+                    this.comboBoxCityFindPage.Items.Add(a);
+                }
+                this.comboBoxCityFindPage.SelectedIndex = 0;
 
+                //Fill ratings
+                this.comboBoxRateFriendFindpage.Items.Clear();
+                int[] ratings = new int[5] { 1, 2, 3, 4, 5 };
+                foreach (var a in ratings)
+                {
+                    this.comboBoxRateFriendFindpage.Items.Add(a);
+                }
+
+                //Fill friends
+                this.comboBoxUsernameFindPage.Items.Clear();
+                foreach (var a in controller.FindAllMembers())
+                {
+                    if (!a.MemberId.Equals(member.MemberId))
+                    {
+                        this.comboBoxUsernameFindPage.Items.Add(a.MemberId);
+                    }
+                }
+
+                //Change font of datagridviews
+                this.dataGridViewSearchLunchboxesFindPage.DefaultCellStyle.Font = new Font("Arial", 10);
+                this.dataGridViewFriendLunchboxesFindPage.DefaultCellStyle.Font = new Font("Arial", 10);
+                this.dataGridViewMyLunchboxesFindPage.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
 
             } catch (Exception ex)
             {
                handleException.HandleExceptions(ex);
-            }
-            
-            
+            }    
         }
 
 
@@ -128,7 +172,7 @@ namespace LS.View
             string city = textBoxCityMyAccount.Text;
             string email = textBoxEmailMyAccount.Text;
             string mobileNbr = textBoxPhoneMyAccount.Text;
-            string description = textBoxDescriptionMyaccount.Text;
+            string description = textBoxDescriptionMyAccount.Text;
 
             try
             {
@@ -144,9 +188,9 @@ namespace LS.View
 
         private bool CheckAllAddALunchTextBoxes()
         {
-            if (string.IsNullOrWhiteSpace(textBoxNameAddALunchBox.Text) || string.IsNullOrWhiteSpace(textBoxQuantityAddALunchBox.Text) || string.IsNullOrWhiteSpace(textBoxContentAddALunchBox.Text) || string.IsNullOrWhiteSpace(textBoxQuantityAddALunchBox.Text))
+            if (string.IsNullOrWhiteSpace(textBoxNameAddALunchBoxMyAccount.Text) || string.IsNullOrWhiteSpace(textBoxQuantityAddALunchBoxMyAccount.Text) || string.IsNullOrWhiteSpace(textBoxContentAddALunchBox.Text) || string.IsNullOrWhiteSpace(textBoxQuantityAddALunchBoxMyAccount.Text))
             {
-                labelAddALunchBoxMessage.Text = "Please fill in all fields";
+                labelAddALunchboxMessage.Text = "Please fill in all fields";
                 return false;
             }
             else
@@ -203,10 +247,10 @@ namespace LS.View
         private void buttonAddLunchboxMyaccount_Click(object sender, EventArgs e)
         {
 
-            string name =  textBoxNameAddALunchBox.Text;
-            string quantityString = textBoxQuantityAddALunchBox.Text;
+            string name =  textBoxNameAddALunchBoxMyAccount.Text;
+            string quantityString = textBoxQuantityAddALunchBoxMyAccount.Text;
             string content = textBoxContentAddALunchBox.Text;
-            string foodCategory = comboBoxFoodCategoryMyaccount.Text;
+            string foodCategory = comboBoxFoodCategoryMyAccount.Text;
              
             //FIXA QUANTITY
 
@@ -232,10 +276,10 @@ namespace LS.View
 
         private void ClearAllMyAccountLunchBox()
         {
-            textBoxNameAddALunchBox.Text = "";
-            textBoxQuantityAddALunchBox.Text = "";
+            textBoxNameAddALunchBoxMyAccount.Text = "";
+            textBoxQuantityAddALunchBoxMyAccount.Text = "";
             textBoxContentAddALunchBox.Text = "";
-            comboBoxFoodCategoryMyaccount.Text = "";
+            comboBoxFoodCategoryMyAccount.Text = "";
         }
 
  
@@ -288,7 +332,124 @@ namespace LS.View
 
         private void buttonSearchForLunchFindpage_Click(object sender, EventArgs e)
         {
+            string foodCategory = comboBoxFoodPreferencesFindPage.SelectedItem.ToString();
+            string city = comboBoxCityFindPage.SelectedItem.ToString();
 
+            this.dataGridViewMyLunchboxesFindPage.DataSource = controller.FindMembersLunchboxes(member);
+            this.dataGridViewFriendLunchboxesFindPage.DataSource = null;
+
+            if (foodCategory == "ALL" && city == "ALL")
+            {
+                this.dataGridViewSearchLunchboxesFindPage.DataSource = controller.FindAllLunchboxes(member);
+
+            }
+            else if (foodCategory == "ALL" && city != null)
+            {
+                this.dataGridViewSearchLunchboxesFindPage.DataSource = controller.FindLunchboxByCity(city, member);
+            }
+            else if (city == "ALL" && foodCategory != null)
+            {
+                this.dataGridViewSearchLunchboxesFindPage.DataSource = controller.FindLunchboxByFoodCategory(foodCategory, member);
+            }
+            else
+            {
+                this.dataGridViewSearchLunchboxesFindPage.DataSource = controller.FindLunchboxByCityAndCategory(city, foodCategory, member);
+            }
         }
+
+        private void buttonSearchForAFriendFindpage_Click(object sender, EventArgs e)
+        {
+            string friendId = comboBoxUsernameFindPage.SelectedItem.ToString();
+            Member friend = controller.FindMember(friendId);
+            textBoxUsernameFindPage.Text = friend.MemberId;
+            textBoxFullNameFindPage.Text = friend.FullName;
+            textBoxMobileFindPage.Text = friend.MobileNr;
+            textBoxEmailFindPage.Text = friend.Email;
+            textBoxDescriptionFindPage.Text = friend.Description;
+
+            this.dataGridViewFriendLunchboxesFindPage.DataSource = controller.FindMembersLunchboxes(friend);
+            this.dataGridViewMyLunchboxesFindPage.DataSource = controller.FindMembersLunchboxes(member);
+            this.dataGridViewSearchLunchboxesFindPage.DataSource = null;
+        }
+
+        private void buttonRateFindpage_Click(object sender, EventArgs e)
+        {         
+            decimal friendGrade = Convert.ToDecimal(comboBoxRateFriendFindpage.SelectedItem.ToString());
+            Member friend = controller.FindMember(textBoxUsernameFindPage.Text);
+            Rating rating = new Rating(friendGrade, friend);
+            controller.AddRating(rating);
+        }
+
+        private void buttonMakeaswitchFindpage_Click(object sender, EventArgs e)
+        {
+
+            //int index = dataGridViewSearchLunchboxesFindPage.SelectedRows[0].Index;// get the Row Index
+
+
+            DataGridViewRow mySelectedRow = dataGridViewMyLunchboxesFindPage.SelectedRows[0];
+            int myLunchboxId = Int32.Parse(mySelectedRow.Cells[0].Value.ToString());
+            LunchBox myLb = controller.FindLunchbox(myLunchboxId);
+            int myQuantity = myLb.Quantity - 1;
+            controller.UpdateLunchbox(myLb.LunchBoxId, myQuantity);
+
+            if (dataGridViewSearchLunchboxesFindPage.SelectedCells != null && dataGridViewFriendLunchboxesFindPage.DataSource == null)
+            {
+                DataGridViewRow selectedRow = dataGridViewSearchLunchboxesFindPage.SelectedRows[0];
+                int lunchboxId = Int32.Parse(selectedRow.Cells[0].Value.ToString());
+                LunchBox lb = controller.FindLunchbox(lunchboxId);
+                int quantity = lb.Quantity - 1;
+                controller.UpdateLunchbox(lb.LunchBoxId, quantity);
+                string information = (member.MemberId + "'s " + myLb.Name + " for " + lb.Member.MemberId + "'s " + lb.Name);
+                //Create a new meetup
+                labelMakeASwitchMessageFindPage.Text = "The switch is now made";
+            }
+            else
+            {
+                labelMakeASwitchMessageFindPage.Text = "Please make a selection first";
+            }
+
+            if (dataGridViewFriendLunchboxesFindPage.SelectedCells != null && dataGridViewSearchLunchboxesFindPage.DataSource == null)
+            {
+                DataGridViewRow friendSelectedRow = dataGridViewSearchLunchboxesFindPage.SelectedRows[0];
+                int friendLunchboxId = Int32.Parse(friendSelectedRow.Cells[0].Value.ToString());
+                LunchBox friendLb = controller.FindLunchbox(friendLunchboxId);
+                int friendQuantity = friendLb.Quantity - 1;
+                controller.UpdateLunchbox(friendLb.LunchBoxId, friendQuantity);
+                string information = (member.MemberId + "'s " + myLb.Name + " for " + friendLb.Member.MemberId + "'s " + friendLb.Name);
+                //Create a new meetup
+                labelMakeASwitchMessageFindPage.Text = "The switch is now made";
+            }
+            else
+            {
+                labelMakeASwitchMessageFindPage.Text = "Please make a selection first";
+            }
+
+            //if(listBoxLunchboxesFindPage.SelectedItem != null && listBoxFriendsLunchboxesFindPage.Items.Count == 0)
+            //{
+            //    string extractedFriendLB = new string(listBoxMyLunchboxesFindPage.SelectedItem.ToString().Trim().TakeWhile(char.IsDigit).ToArray());
+            //    Lunchbox friendLunchbox = controller.FindLunchbox(Convert.ToInt64(extractedFriendLB));
+            //    int quantityFriendLB = friendLunchbox.Quantity - 1;
+            //    controller.UpdateLunchbox(friendLunchbox.LunchBoxId, quantityFriendLB);
+            //    string information = (u.UserId + "'s " + myLB.Name + " for " + friendLunchbox.User.UserId + "'s " + friendLunchbox.Name);
+            //    CreateNewMeetUp(u.UserId, friendLunchbox.User.UserId, information);
+            //    labelMakeASwitchMessageFindPage.Text = "The switch is now made";
+            //}
+
+            //if (listBoxFriendsLunchboxesFindPage.SelectedItem != null && listBoxLunchboxesFindPage.Items.Count == 0)
+            //{
+            //    string extractedFriendLB = new string(listBoxFriendsLunchboxesFindPage.SelectedItem.ToString().Trim().TakeWhile(char.IsDigit).ToArray());
+            //    Lunchbox friendLunchbox = controller.FindLunchbox(Convert.ToInt64(extractedFriendLB));
+            //    int quantityFriendLB = friendLunchbox.Quantity - 1;
+            //    controller.UpdateLunchbox(friendLunchbox.LunchBoxId, quantityFriendLB);
+            //    string information = (u.UserId + "'s " + myLB.Name + " for " + friendLunchbox.User.UserId + "'s " + friendLunchbox.Name);
+            //    CreateNewMeetUp(u.UserId, friendLunchbox.User.UserId, information);
+            //    labelMakeASwitchMessageFindPage.Text = "The switch is now made";
+            //}
+        }
+
+        //    CreateNewMeetUp(member, friendLunchbox.Member.memberId, information){
+        //      MeetUp meetUp = new MeetUp(member, friend, information);
+        //      }
+
     }
 }

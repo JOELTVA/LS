@@ -121,6 +121,18 @@ namespace LS.Controller
             }
         }
 
+        public void UpdateLunchbox(long lunchBoxId, int quantity)
+        {
+            try
+            {
+                lsa.UpdateLunchbox(lunchBoxId, quantity);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public List<LunchBox> FindAllLunchboxes(Member m)
         {
             try
@@ -132,6 +144,7 @@ namespace LS.Controller
                 throw ex;
             }
         }
+
         public List<LunchBox> FindMembersLunchboxes(Member m)
         {
             try
