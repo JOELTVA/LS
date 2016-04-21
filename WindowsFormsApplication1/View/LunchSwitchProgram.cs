@@ -30,23 +30,10 @@ namespace LS.View
             this.WindowState = FormWindowState.Maximized;
             FillMyAccountPage();
 
-
-
-
             dataGridViewLunchBoxesMyAccount.DefaultCellStyle.Font = new Font("Arial", 10);
             dataGridViewLunchBoxesMyAccount.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
             dataGridViewMyMeetUpsMyAccount.DefaultCellStyle.Font = new Font("Arial", 10);
             dataGridViewMyMeetUpsMyAccount.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LunchSwitchProgram_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -67,10 +54,20 @@ namespace LS.View
 
         private void buttonLogOutMyaccount_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            LunchSwitchStartpage startPage = new LunchSwitchStartpage();
-            startPage.WindowState = FormWindowState.Maximized;
-            startPage.Visible = true;
+
+            DialogResult answer = MessageBox.Show("Are you sure that you want to log out and exit Lunch-switch?",
+            "Important Question", MessageBoxButtons.YesNo);
+            if (answer == DialogResult.Yes)
+            {
+                this.Visible = false;
+                LunchSwitchStartpage startPage = new LunchSwitchStartpage();
+                startPage.WindowState = FormWindowState.Maximized;
+                startPage.Visible = true;
+            }
+            else
+            {
+                //do nothing, close the message box
+            }       
         }
 
         private void buttonRemoveLunchboxMyaccont_Click(object sender, EventArgs e)
@@ -108,6 +105,8 @@ namespace LS.View
                 formatLunchBoxesMyAccount();
                 dataGridViewMyMeetUpsMyAccount.DataSource = controller.FindMembersMeetUps(member);
                 formatMeetUpsMyAccount();
+
+
 
 
 
