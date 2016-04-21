@@ -31,9 +31,9 @@ using System.Data.Entity.Spatial;
         public virtual string MemberId { get; set; }
         public virtual Member Member { get; set; }
 
-        public Decimal getALL()
+        public String getALL()
         {
-            return this.Grade;
+            return "FIXA DETTA NU";
         }
         
 
