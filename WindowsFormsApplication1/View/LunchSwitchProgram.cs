@@ -267,7 +267,7 @@ namespace LS.View
             }
             catch (Exception ex)
             {
-               //ska inte slängas
+                //ska inte throwas
             }
 
         }
