@@ -12,7 +12,7 @@ using System.Data.Entity.Spatial;
     public partial class Rating
     {
 
-        
+        //HEJ JOEL
         public Rating()
         {
 
@@ -30,7 +30,7 @@ using System.Data.Entity.Spatial;
 
         public virtual string MemberId { get; set; }
         public virtual Member Member { get; set; }
-
+        
         public String getALL()
         {
             return "FIXA DETTA NU";
