@@ -12,7 +12,7 @@ using System.Data.Entity.Spatial;
     public partial class Rating
     {
 
-        //HEJ JOEL
+        //HEJ JOELTVA
         public Rating()
         {
 
