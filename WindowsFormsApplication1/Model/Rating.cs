@@ -11,6 +11,8 @@ using System.Data.Entity.Spatial;
     [Table("Rating")]
     public partial class Rating
     {
+
+        //HEJ AMANDA
         public Rating()
         {
 

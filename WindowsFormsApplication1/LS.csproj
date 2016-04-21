@@ -62,7 +62,6 @@
     <Compile Include="DAL\LunchSwitchAccess.cs" />
     <Compile Include="DAL\LunchSwitchEDM.cs" />
     <Compile Include="Exception\HandleException.cs" />
-    <Compile Include="Model\Class1.cs" />
     <Compile Include="Model\LunchBox.cs" />
     <Compile Include="Model\MeetUp.cs" />
     <Compile Include="Model\MeetUp_Member.cs" />
