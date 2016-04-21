@@ -73,11 +73,24 @@ namespace LS.DAL
             }
         }
 
-        public List<Member> FindAllMembers(Member m)
+        public List<Member> FindAllMembersExpectUser(Member m)
         {
             try
             {
                 List<Member> listMembers = (from u in db.Members where u != m select u).ToList();
+                return listMembers;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Member> FindAllMembers()
+        {
+            try
+            {
+                List<Member> listMembers = (from u in db.Members select u).ToList();
                 return listMembers;
             }
             catch (Exception ex)
