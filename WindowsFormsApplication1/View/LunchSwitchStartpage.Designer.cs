@@ -31,22 +31,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LunchSwitchStartpage));
-            this.richTextBoxAbout = new System.Windows.Forms.RichTextBox();
-            this.labelAlreadyAMemeber = new System.Windows.Forms.Label();
+            this.richTextBoxAboutStartpage = new System.Windows.Forms.RichTextBox();
+            this.labelAlreadyAMemberStartpage = new System.Windows.Forms.Label();
             this.labelUsernameStartpageAlreadyAMember = new System.Windows.Forms.Label();
-            this.labelPasswordStartpageAlreadyAMember = new System.Windows.Forms.Label();
-            this.process1 = new System.Diagnostics.Process();
+            this.labelPasswordStartpageAlreadyAMemberStartpage = new System.Windows.Forms.Label();
+            this.processInit = new System.Diagnostics.Process();
             this.labelRegisterStartpage = new System.Windows.Forms.Label();
             this.labelUsernameStarpage = new System.Windows.Forms.Label();
             this.labelNameStartpage = new System.Windows.Forms.Label();
             this.labelPasswordStartpage = new System.Windows.Forms.Label();
             this.labelCityStartpage = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageListStartPage = new System.Windows.Forms.ImageList(this.components);
             this.labelPhoneStartpage = new System.Windows.Forms.Label();
             this.labelEmailStartpage = new System.Windows.Forms.Label();
             this.labelDescriptionStartpage = new System.Windows.Forms.Label();
-            this.textBoxUsernameStartpageAlreadyAMember = new System.Windows.Forms.TextBox();
-            this.textBoxPasswordStartpageAlreadyAMember = new System.Windows.Forms.TextBox();
+            this.textBoxUsernameAlreadyAMemberStartpage = new System.Windows.Forms.TextBox();
+            this.textBoxPasswordAlreadyAMemberStartpage = new System.Windows.Forms.TextBox();
             this.textBoxUsernameStartpage = new System.Windows.Forms.TextBox();
             this.textBoxPasswordStartpage = new System.Windows.Forms.TextBox();
             this.textBoxNameStartpage = new System.Windows.Forms.TextBox();
@@ -56,41 +56,40 @@
             this.textBoxDescripstionStartpage = new System.Windows.Forms.TextBox();
             this.buttonLoginStartpage = new System.Windows.Forms.Button();
             this.buttonRegisterStartpage = new System.Windows.Forms.Button();
-            this.labelRecquiredField = new System.Windows.Forms.Label();
+            this.labelRequiredFieldStartpage = new System.Windows.Forms.Label();
             this.labelWelcomeStartpage = new System.Windows.Forms.Label();
             this.groupBoxAlreadyAMemberStartpage = new System.Windows.Forms.GroupBox();
-            this.labelLogInMessage = new System.Windows.Forms.Label();
+            this.labelLogInMessageStartpage = new System.Windows.Forms.Label();
             this.groupBoxRegisterStartpage = new System.Windows.Forms.GroupBox();
-            this.labelRegisterMessage = new System.Windows.Forms.Label();
+            this.labelRegisterMessageStartpage = new System.Windows.Forms.Label();
             this.labelAboutUsStartpage = new System.Windows.Forms.Label();
             this.groupBoxAlreadyAMemberStartpage.SuspendLayout();
             this.groupBoxRegisterStartpage.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBoxAbout
+            // richTextBoxAboutStartpage
             // 
-            this.richTextBoxAbout.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.richTextBoxAbout.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxAbout.Location = new System.Drawing.Point(56, 320);
-            this.richTextBoxAbout.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.richTextBoxAbout.Name = "richTextBoxAbout";
-            this.richTextBoxAbout.Size = new System.Drawing.Size(1316, 786);
-            this.richTextBoxAbout.TabIndex = 0;
-            this.richTextBoxAbout.Text = resources.GetString("richTextBoxAbout.Text");
+            this.richTextBoxAboutStartpage.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.richTextBoxAboutStartpage.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxAboutStartpage.Location = new System.Drawing.Point(56, 320);
+            this.richTextBoxAboutStartpage.Margin = new System.Windows.Forms.Padding(5);
+            this.richTextBoxAboutStartpage.Name = "richTextBoxAboutStartpage";
+            this.richTextBoxAboutStartpage.Size = new System.Drawing.Size(1316, 786);
+            this.richTextBoxAboutStartpage.TabIndex = 0;
+            this.richTextBoxAboutStartpage.Text = resources.GetString("richTextBoxAboutStartpage.Text");
             // 
-            // labelAlreadyAMemeber
+            // labelAlreadyAMemberStartpage
             // 
-            this.labelAlreadyAMemeber.AutoEllipsis = true;
-            this.labelAlreadyAMemeber.AutoSize = true;
-            this.labelAlreadyAMemeber.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlreadyAMemeber.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelAlreadyAMemeber.Location = new System.Drawing.Point(35, 153);
-            this.labelAlreadyAMemeber.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelAlreadyAMemeber.Name = "labelAlreadyAMemeber";
-            this.labelAlreadyAMemeber.Size = new System.Drawing.Size(181, 84);
-            this.labelAlreadyAMemeber.TabIndex = 1;
-            this.labelAlreadyAMemeber.Text = "Log in";
-            this.labelAlreadyAMemeber.Click += new System.EventHandler(this.labelAlreadyAMemeber_Click);
+            this.labelAlreadyAMemberStartpage.AutoEllipsis = true;
+            this.labelAlreadyAMemberStartpage.AutoSize = true;
+            this.labelAlreadyAMemberStartpage.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAlreadyAMemberStartpage.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAlreadyAMemberStartpage.Location = new System.Drawing.Point(35, 153);
+            this.labelAlreadyAMemberStartpage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelAlreadyAMemberStartpage.Name = "labelAlreadyAMemberStartpage";
+            this.labelAlreadyAMemberStartpage.Size = new System.Drawing.Size(181, 84);
+            this.labelAlreadyAMemberStartpage.TabIndex = 1;
+            this.labelAlreadyAMemberStartpage.Text = "Log in";
             // 
             // labelUsernameStartpageAlreadyAMember
             // 
@@ -103,27 +102,26 @@
             this.labelUsernameStartpageAlreadyAMember.TabIndex = 2;
             this.labelUsernameStartpageAlreadyAMember.Text = "Username:";
             // 
-            // labelPasswordStartpageAlreadyAMember
+            // labelPasswordStartpageAlreadyAMemberStartpage
             // 
-            this.labelPasswordStartpageAlreadyAMember.AutoSize = true;
-            this.labelPasswordStartpageAlreadyAMember.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPasswordStartpageAlreadyAMember.Location = new System.Drawing.Point(37, 329);
-            this.labelPasswordStartpageAlreadyAMember.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelPasswordStartpageAlreadyAMember.Name = "labelPasswordStartpageAlreadyAMember";
-            this.labelPasswordStartpageAlreadyAMember.Size = new System.Drawing.Size(231, 70);
-            this.labelPasswordStartpageAlreadyAMember.TabIndex = 3;
-            this.labelPasswordStartpageAlreadyAMember.Text = "Password:";
-            this.labelPasswordStartpageAlreadyAMember.Click += new System.EventHandler(this.labelPassword_Click);
+            this.labelPasswordStartpageAlreadyAMemberStartpage.AutoSize = true;
+            this.labelPasswordStartpageAlreadyAMemberStartpage.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPasswordStartpageAlreadyAMemberStartpage.Location = new System.Drawing.Point(37, 329);
+            this.labelPasswordStartpageAlreadyAMemberStartpage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelPasswordStartpageAlreadyAMemberStartpage.Name = "labelPasswordStartpageAlreadyAMemberStartpage";
+            this.labelPasswordStartpageAlreadyAMemberStartpage.Size = new System.Drawing.Size(231, 70);
+            this.labelPasswordStartpageAlreadyAMemberStartpage.TabIndex = 3;
+            this.labelPasswordStartpageAlreadyAMemberStartpage.Text = "Password:";            
             // 
-            // process1
+            // processInit
             // 
-            this.process1.StartInfo.Domain = "";
-            this.process1.StartInfo.LoadUserProfile = false;
-            this.process1.StartInfo.Password = null;
-            this.process1.StartInfo.StandardErrorEncoding = null;
-            this.process1.StartInfo.StandardOutputEncoding = null;
-            this.process1.StartInfo.UserName = "";
-            this.process1.SynchronizingObject = this;
+            this.processInit.StartInfo.Domain = "";
+            this.processInit.StartInfo.LoadUserProfile = false;
+            this.processInit.StartInfo.Password = null;
+            this.processInit.StartInfo.StandardErrorEncoding = null;
+            this.processInit.StartInfo.StandardOutputEncoding = null;
+            this.processInit.StartInfo.UserName = "";
+            this.processInit.SynchronizingObject = this;
             // 
             // labelRegisterStartpage
             // 
@@ -180,11 +178,11 @@
             this.labelCityStartpage.TabIndex = 8;
             this.labelCityStartpage.Text = "*City:";
             // 
-            // imageList1
+            // imageListStartPage
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListStartPage.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageListStartPage.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListStartPage.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // labelPhoneStartpage
             // 
@@ -219,46 +217,43 @@
             this.labelDescriptionStartpage.TabIndex = 11;
             this.labelDescriptionStartpage.Text = "*Description:";
             // 
-            // textBoxUsernameStartpageAlreadyAMember
+            // textBoxUsernameAlreadyAMemberStartpage
             // 
-            this.textBoxUsernameStartpageAlreadyAMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsernameStartpageAlreadyAMember.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.textBoxUsernameStartpageAlreadyAMember.Location = new System.Drawing.Point(301, 238);
-            this.textBoxUsernameStartpageAlreadyAMember.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBoxUsernameStartpageAlreadyAMember.Name = "textBoxUsernameStartpageAlreadyAMember";
-            this.textBoxUsernameStartpageAlreadyAMember.Size = new System.Drawing.Size(401, 49);
-            this.textBoxUsernameStartpageAlreadyAMember.TabIndex = 12;
-            this.textBoxUsernameStartpageAlreadyAMember.TextChanged += new System.EventHandler(this.textBoxUsernameStartpageAlreadyAMember_TextChanged);
+            this.textBoxUsernameAlreadyAMemberStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsernameAlreadyAMemberStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.textBoxUsernameAlreadyAMemberStartpage.Location = new System.Drawing.Point(301, 238);
+            this.textBoxUsernameAlreadyAMemberStartpage.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxUsernameAlreadyAMemberStartpage.Name = "textBoxUsernameAlreadyAMemberStartpage";
+            this.textBoxUsernameAlreadyAMemberStartpage.Size = new System.Drawing.Size(401, 49);
+            this.textBoxUsernameAlreadyAMemberStartpage.TabIndex = 12;            
             // 
-            // textBoxPasswordStartpageAlreadyAMember
+            // textBoxPasswordAlreadyAMemberStartpage
             // 
-            this.textBoxPasswordStartpageAlreadyAMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPasswordStartpageAlreadyAMember.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.textBoxPasswordStartpageAlreadyAMember.Location = new System.Drawing.Point(301, 341);
-            this.textBoxPasswordStartpageAlreadyAMember.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBoxPasswordStartpageAlreadyAMember.Name = "textBoxPasswordStartpageAlreadyAMember";
-            this.textBoxPasswordStartpageAlreadyAMember.PasswordChar = '*';
-            this.textBoxPasswordStartpageAlreadyAMember.Size = new System.Drawing.Size(401, 53);
-            this.textBoxPasswordStartpageAlreadyAMember.TabIndex = 13;
-            this.textBoxPasswordStartpageAlreadyAMember.TextChanged += new System.EventHandler(this.textBoxPasswordStartpageAldreadyAMember_TextChanged);
+            this.textBoxPasswordAlreadyAMemberStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPasswordAlreadyAMemberStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.textBoxPasswordAlreadyAMemberStartpage.Location = new System.Drawing.Point(301, 341);
+            this.textBoxPasswordAlreadyAMemberStartpage.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxPasswordAlreadyAMemberStartpage.Name = "textBoxPasswordAlreadyAMemberStartpage";
+            this.textBoxPasswordAlreadyAMemberStartpage.PasswordChar = '*';
+            this.textBoxPasswordAlreadyAMemberStartpage.Size = new System.Drawing.Size(401, 53);
+            this.textBoxPasswordAlreadyAMemberStartpage.TabIndex = 13;            
             // 
             // textBoxUsernameStartpage
             // 
             this.textBoxUsernameStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsernameStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBoxUsernameStartpage.Location = new System.Drawing.Point(360, 281);
-            this.textBoxUsernameStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxUsernameStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxUsernameStartpage.Name = "textBoxUsernameStartpage";
             this.textBoxUsernameStartpage.Size = new System.Drawing.Size(657, 53);
             this.textBoxUsernameStartpage.TabIndex = 14;
-            this.textBoxUsernameStartpage.TextChanged += new System.EventHandler(this.textBoxUsernameStartpage_TextChanged);
             // 
             // textBoxPasswordStartpage
             // 
             this.textBoxPasswordStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPasswordStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBoxPasswordStartpage.Location = new System.Drawing.Point(360, 353);
-            this.textBoxPasswordStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxPasswordStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxPasswordStartpage.Name = "textBoxPasswordStartpage";
             this.textBoxPasswordStartpage.Size = new System.Drawing.Size(657, 53);
             this.textBoxPasswordStartpage.TabIndex = 15;
@@ -268,18 +263,17 @@
             this.textBoxNameStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNameStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBoxNameStartpage.Location = new System.Drawing.Point(360, 422);
-            this.textBoxNameStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxNameStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxNameStartpage.Name = "textBoxNameStartpage";
             this.textBoxNameStartpage.Size = new System.Drawing.Size(657, 53);
-            this.textBoxNameStartpage.TabIndex = 16;
-            this.textBoxNameStartpage.TextChanged += new System.EventHandler(this.textBoxNameStartpage_TextChanged);
+            this.textBoxNameStartpage.TabIndex = 16;            
             // 
             // textBoxCityStartpage
             // 
             this.textBoxCityStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCityStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBoxCityStartpage.Location = new System.Drawing.Point(360, 486);
-            this.textBoxCityStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxCityStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxCityStartpage.Name = "textBoxCityStartpage";
             this.textBoxCityStartpage.Size = new System.Drawing.Size(657, 53);
             this.textBoxCityStartpage.TabIndex = 17;
@@ -289,7 +283,7 @@
             this.textBoxPhoneStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPhoneStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBoxPhoneStartpage.Location = new System.Drawing.Point(360, 551);
-            this.textBoxPhoneStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxPhoneStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxPhoneStartpage.Name = "textBoxPhoneStartpage";
             this.textBoxPhoneStartpage.Size = new System.Drawing.Size(657, 53);
             this.textBoxPhoneStartpage.TabIndex = 18;
@@ -299,7 +293,7 @@
             this.textBoxEmailStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmailStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBoxEmailStartpage.Location = new System.Drawing.Point(360, 618);
-            this.textBoxEmailStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxEmailStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxEmailStartpage.Name = "textBoxEmailStartpage";
             this.textBoxEmailStartpage.Size = new System.Drawing.Size(657, 53);
             this.textBoxEmailStartpage.TabIndex = 19;
@@ -309,7 +303,7 @@
             this.textBoxDescripstionStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescripstionStartpage.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBoxDescripstionStartpage.Location = new System.Drawing.Point(360, 689);
-            this.textBoxDescripstionStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxDescripstionStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxDescripstionStartpage.Name = "textBoxDescripstionStartpage";
             this.textBoxDescripstionStartpage.Size = new System.Drawing.Size(652, 53);
             this.textBoxDescripstionStartpage.TabIndex = 20;
@@ -318,7 +312,7 @@
             // 
             this.buttonLoginStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoginStartpage.Location = new System.Drawing.Point(472, 422);
-            this.buttonLoginStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonLoginStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.buttonLoginStartpage.Name = "buttonLoginStartpage";
             this.buttonLoginStartpage.Size = new System.Drawing.Size(237, 86);
             this.buttonLoginStartpage.TabIndex = 21;
@@ -330,7 +324,7 @@
             // 
             this.buttonRegisterStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegisterStartpage.Location = new System.Drawing.Point(787, 761);
-            this.buttonRegisterStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonRegisterStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.buttonRegisterStartpage.Name = "buttonRegisterStartpage";
             this.buttonRegisterStartpage.Size = new System.Drawing.Size(232, 86);
             this.buttonRegisterStartpage.TabIndex = 22;
@@ -338,16 +332,16 @@
             this.buttonRegisterStartpage.UseVisualStyleBackColor = true;
             this.buttonRegisterStartpage.Click += new System.EventHandler(this.buttonRegisterStartpage_Click);
             // 
-            // labelRecquiredField
+            // labelRequiredFieldStartpage
             // 
-            this.labelRecquiredField.AutoSize = true;
-            this.labelRecquiredField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecquiredField.Location = new System.Drawing.Point(37, 205);
-            this.labelRecquiredField.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelRecquiredField.Name = "labelRecquiredField";
-            this.labelRecquiredField.Size = new System.Drawing.Size(304, 39);
-            this.labelRecquiredField.TabIndex = 23;
-            this.labelRecquiredField.Text = "* Recquired field. ";
+            this.labelRequiredFieldStartpage.AutoSize = true;
+            this.labelRequiredFieldStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRequiredFieldStartpage.Location = new System.Drawing.Point(37, 205);
+            this.labelRequiredFieldStartpage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelRequiredFieldStartpage.Name = "labelRequiredFieldStartpage";
+            this.labelRequiredFieldStartpage.Size = new System.Drawing.Size(286, 39);
+            this.labelRequiredFieldStartpage.TabIndex = 23;
+            this.labelRequiredFieldStartpage.Text = "* Required field. ";
             // 
             // labelWelcomeStartpage
             // 
@@ -364,40 +358,40 @@
             // groupBoxAlreadyAMemberStartpage
             // 
             this.groupBoxAlreadyAMemberStartpage.BackColor = System.Drawing.Color.Transparent;
-            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.labelLogInMessage);
+            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.labelLogInMessageStartpage);
             this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.labelUsernameStartpageAlreadyAMember);
-            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.labelAlreadyAMemeber);
-            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.textBoxUsernameStartpageAlreadyAMember);
-            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.labelPasswordStartpageAlreadyAMember);
-            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.textBoxPasswordStartpageAlreadyAMember);
+            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.labelAlreadyAMemberStartpage);
+            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.textBoxUsernameAlreadyAMemberStartpage);
+            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.labelPasswordStartpageAlreadyAMemberStartpage);
+            this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.textBoxPasswordAlreadyAMemberStartpage);
             this.groupBoxAlreadyAMemberStartpage.Controls.Add(this.buttonLoginStartpage);
             this.groupBoxAlreadyAMemberStartpage.Font = new System.Drawing.Font("Segoe Print", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxAlreadyAMemberStartpage.Location = new System.Drawing.Point(1411, 227);
-            this.groupBoxAlreadyAMemberStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxAlreadyAMemberStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.groupBoxAlreadyAMemberStartpage.Name = "groupBoxAlreadyAMemberStartpage";
-            this.groupBoxAlreadyAMemberStartpage.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxAlreadyAMemberStartpage.Padding = new System.Windows.Forms.Padding(5);
             this.groupBoxAlreadyAMemberStartpage.Size = new System.Drawing.Size(736, 882);
             this.groupBoxAlreadyAMemberStartpage.TabIndex = 25;
             this.groupBoxAlreadyAMemberStartpage.TabStop = false;
-            this.groupBoxAlreadyAMemberStartpage.Text = "Already a memeber?";
+            this.groupBoxAlreadyAMemberStartpage.Text = "Already a member?";
             // 
-            // labelLogInMessage
+            // labelLogInMessageStartpage
             // 
-            this.labelLogInMessage.AutoSize = true;
-            this.labelLogInMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogInMessage.Location = new System.Drawing.Point(51, 541);
-            this.labelLogInMessage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelLogInMessage.Name = "labelLogInMessage";
-            this.labelLogInMessage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelLogInMessage.Size = new System.Drawing.Size(0, 32);
-            this.labelLogInMessage.TabIndex = 24;
+            this.labelLogInMessageStartpage.AutoSize = true;
+            this.labelLogInMessageStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogInMessageStartpage.Location = new System.Drawing.Point(51, 541);
+            this.labelLogInMessageStartpage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelLogInMessageStartpage.Name = "labelLogInMessageStartpage";
+            this.labelLogInMessageStartpage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelLogInMessageStartpage.Size = new System.Drawing.Size(0, 32);
+            this.labelLogInMessageStartpage.TabIndex = 24;
             // 
             // groupBoxRegisterStartpage
             // 
             this.groupBoxRegisterStartpage.BackColor = System.Drawing.Color.Transparent;
-            this.groupBoxRegisterStartpage.Controls.Add(this.labelRegisterMessage);
+            this.groupBoxRegisterStartpage.Controls.Add(this.labelRegisterMessageStartpage);
             this.groupBoxRegisterStartpage.Controls.Add(this.labelRegisterStartpage);
-            this.groupBoxRegisterStartpage.Controls.Add(this.labelRecquiredField);
+            this.groupBoxRegisterStartpage.Controls.Add(this.labelRequiredFieldStartpage);
             this.groupBoxRegisterStartpage.Controls.Add(this.labelUsernameStarpage);
             this.groupBoxRegisterStartpage.Controls.Add(this.buttonRegisterStartpage);
             this.groupBoxRegisterStartpage.Controls.Add(this.labelPasswordStartpage);
@@ -415,24 +409,23 @@
             this.groupBoxRegisterStartpage.Controls.Add(this.labelCityStartpage);
             this.groupBoxRegisterStartpage.Font = new System.Drawing.Font("Segoe Print", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxRegisterStartpage.Location = new System.Drawing.Point(2179, 227);
-            this.groupBoxRegisterStartpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxRegisterStartpage.Margin = new System.Windows.Forms.Padding(5);
             this.groupBoxRegisterStartpage.Name = "groupBoxRegisterStartpage";
-            this.groupBoxRegisterStartpage.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxRegisterStartpage.Padding = new System.Windows.Forms.Padding(5);
             this.groupBoxRegisterStartpage.Size = new System.Drawing.Size(1128, 882);
             this.groupBoxRegisterStartpage.TabIndex = 26;
             this.groupBoxRegisterStartpage.TabStop = false;
             this.groupBoxRegisterStartpage.Text = "Register here!";
-            this.groupBoxRegisterStartpage.Enter += new System.EventHandler(this.groupBoxRegisterStartpage_Enter);
             // 
-            // labelRegisterMessage
+            // labelRegisterMessageStartpage
             // 
-            this.labelRegisterMessage.AutoSize = true;
-            this.labelRegisterMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegisterMessage.Location = new System.Drawing.Point(40, 787);
-            this.labelRegisterMessage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelRegisterMessage.Name = "labelRegisterMessage";
-            this.labelRegisterMessage.Size = new System.Drawing.Size(0, 32);
-            this.labelRegisterMessage.TabIndex = 28;
+            this.labelRegisterMessageStartpage.AutoSize = true;
+            this.labelRegisterMessageStartpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegisterMessageStartpage.Location = new System.Drawing.Point(40, 787);
+            this.labelRegisterMessageStartpage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelRegisterMessageStartpage.Name = "labelRegisterMessageStartpage";
+            this.labelRegisterMessageStartpage.Size = new System.Drawing.Size(0, 32);
+            this.labelRegisterMessageStartpage.TabIndex = 28;
             // 
             // labelAboutUsStartpage
             // 
@@ -458,39 +451,37 @@
             this.Controls.Add(this.groupBoxRegisterStartpage);
             this.Controls.Add(this.groupBoxAlreadyAMemberStartpage);
             this.Controls.Add(this.labelWelcomeStartpage);
-            this.Controls.Add(this.richTextBoxAbout);
+            this.Controls.Add(this.richTextBoxAboutStartpage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "LunchSwitchStartpage";
             this.Text = "Lunch Switch Startpage";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxAlreadyAMemberStartpage.ResumeLayout(false);
             this.groupBoxAlreadyAMemberStartpage.PerformLayout();
             this.groupBoxRegisterStartpage.ResumeLayout(false);
             this.groupBoxRegisterStartpage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBoxAbout;
-        private System.Windows.Forms.Label labelAlreadyAMemeber;
+        private System.Windows.Forms.RichTextBox richTextBoxAboutStartpage;
+        private System.Windows.Forms.Label labelAlreadyAMemberStartpage;
         private System.Windows.Forms.Label labelUsernameStartpageAlreadyAMember;
-        private System.Windows.Forms.Label labelPasswordStartpageAlreadyAMember;
-        private System.Diagnostics.Process process1;
+        private System.Windows.Forms.Label labelPasswordStartpageAlreadyAMemberStartpage;
+        private System.Diagnostics.Process processInit;
         private System.Windows.Forms.Label labelPasswordStartpage;
         private System.Windows.Forms.Label labelNameStartpage;
         private System.Windows.Forms.Label labelUsernameStarpage;
         private System.Windows.Forms.Label labelRegisterStartpage;
-        private System.Windows.Forms.TextBox textBoxPasswordStartpageAlreadyAMember;
-        private System.Windows.Forms.TextBox textBoxUsernameStartpageAlreadyAMember;
+        private System.Windows.Forms.TextBox textBoxPasswordAlreadyAMemberStartpage;
+        private System.Windows.Forms.TextBox textBoxUsernameAlreadyAMemberStartpage;
         private System.Windows.Forms.Label labelDescriptionStartpage;
         private System.Windows.Forms.Label labelEmailStartpage;
         private System.Windows.Forms.Label labelPhoneStartpage;
         private System.Windows.Forms.Label labelCityStartpage;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageListStartPage;
         private System.Windows.Forms.TextBox textBoxNameStartpage;
         private System.Windows.Forms.TextBox textBoxPasswordStartpage;
         private System.Windows.Forms.TextBox textBoxUsernameStartpage;
@@ -500,13 +491,13 @@
         private System.Windows.Forms.TextBox textBoxEmailStartpage;
         private System.Windows.Forms.TextBox textBoxPhoneStartpage;
         private System.Windows.Forms.TextBox textBoxCityStartpage;
-        private System.Windows.Forms.Label labelRecquiredField;
+        private System.Windows.Forms.Label labelRequiredFieldStartpage;
         private System.Windows.Forms.Label labelWelcomeStartpage;
         private System.Windows.Forms.GroupBox groupBoxRegisterStartpage;
         private System.Windows.Forms.GroupBox groupBoxAlreadyAMemberStartpage;
         private System.Windows.Forms.Label labelAboutUsStartpage;
-        private System.Windows.Forms.Label labelLogInMessage;
-        private System.Windows.Forms.Label labelRegisterMessage;
+        private System.Windows.Forms.Label labelLogInMessageStartpage;
+        private System.Windows.Forms.Label labelRegisterMessageStartpage;
     }
 }
 

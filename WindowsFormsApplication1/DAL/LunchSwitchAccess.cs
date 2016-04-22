@@ -73,11 +73,11 @@ namespace LS.DAL
             }
         }
 
-        public List<Member> FindAllMembersExpectUser(Member m)
+        public List<Member> FindAllMembers()
         {
             try
             {
-                List<Member> listMembers = (from u in db.Members where u != m select u).ToList();
+                List<Member> listMembers = (from u in db.Members select u).ToList();
                 return listMembers;
             }
             catch (Exception ex)
@@ -86,11 +86,11 @@ namespace LS.DAL
             }
         }
 
-        public List<Member> FindAllMembers()
+        public List<Member> FindAllMembersExpectUser(Member m)
         {
             try
             {
-                List<Member> listMembers = (from u in db.Members select u).ToList();
+                List<Member> listMembers = (from u in db.Members where u != m select u).ToList();
                 return listMembers;
             }
             catch (Exception ex)
@@ -113,8 +113,8 @@ namespace LS.DAL
         }
 
 
-        //Lunchbox
-        public LunchBox FindLunchbox(long lunchBoxId)
+        //LunchBox
+        public LunchBox FindLunchBox(long lunchBoxId)
         {
             try
             {
@@ -126,7 +126,7 @@ namespace LS.DAL
             }
         }
 
-        public void AddLunchbox(LunchBox l)
+        public void AddLunchBox(LunchBox l)
         {
             try
             {
@@ -139,11 +139,11 @@ namespace LS.DAL
             }
         }
 
-        public void DeleteLunchbox(long lunchBoxId)
+        public void DeleteLunchBox(long lunchBoxId)
         {
             try
             {
-                LunchBox l = FindLunchbox(lunchBoxId);
+                LunchBox l = FindLunchBox(lunchBoxId);
                 db.LunchBoxes.Remove(l);
                 db.SaveChanges();
             }
@@ -153,7 +153,7 @@ namespace LS.DAL
             }
         }
 
-        public void UpdateLunchbox(long lunchBoxId, int quantity)
+        public void UpdateLunchBox(long lunchBoxId, int quantity)
         {
             try
             {
@@ -168,12 +168,12 @@ namespace LS.DAL
             }
         }
 
-        public List<LunchBox> FindMembersLunchboxes(Member m)
+        public List<LunchBox> FindMembersLunchBoxes(Member m)
         {
             try
             {
-                List<LunchBox> listLunchboxes = (from l in db.LunchBoxes where l.MemberId == m.MemberId select l).ToList();
-                return listLunchboxes;
+                List<LunchBox> listLunchBoxes = (from l in db.LunchBoxes where l.MemberId == m.MemberId select l).ToList();
+                return listLunchBoxes;
             }
             catch (Exception ex)
             {
@@ -181,12 +181,12 @@ namespace LS.DAL
             }
         }
 
-        public List<LunchBox> FindAllLunchboxes(Member m)
+        public List<LunchBox> FindAllLunchBoxes(Member m)
         {
             try
             {
-                List<LunchBox> listLunchboxes = (from l in db.LunchBoxes where l.MemberId != m.MemberId select l).ToList();
-                return listLunchboxes;
+                List<LunchBox> listLunchBoxes = (from l in db.LunchBoxes where l.MemberId != m.MemberId select l).ToList();
+                return listLunchBoxes;
             }
             catch (Exception ex)
             {
@@ -194,12 +194,12 @@ namespace LS.DAL
             }
         }
 
-        public List<LunchBox> FindLunchboxByFoodCategory(string foodCategory, Member m)
+        public List<LunchBox> FindLunchBoxByFoodCategory(string foodCategory, Member m)
         {
             try
             {
-                List<LunchBox> listLunchbox = (from l in db.LunchBoxes where l.FoodCategory == foodCategory && l.Member != m select l).ToList();
-                return listLunchbox;
+                List<LunchBox> listLunchBox = (from l in db.LunchBoxes where l.FoodCategory == foodCategory && l.Member != m select l).ToList();
+                return listLunchBox;
             }
             catch (Exception ex)
             {
@@ -207,9 +207,9 @@ namespace LS.DAL
             }
         }
 
-        public List<String> FindAllLunchboxesCitys()
+        public List<string> FindAllLunchBoxesCitys()
         {
-            List<String> cities = new List<String>();
+            List<string> cities = new List<string>();
             List<Member> Members = this.FindAllMembers();
             foreach(Member m in Members)
             {
@@ -218,34 +218,34 @@ namespace LS.DAL
             return cities;
         }
 
-        public List<LunchBox> FindLunchboxByCity(String city, Member m)
+        public List<LunchBox> FindLunchBoxByCity(string city, Member m)
         {
             List<Member> Members = this.FindMemberByCity(city, m);
-            List<LunchBox> lunchboxes = new List<LunchBox>();
+            List<LunchBox> lunchBoxes = new List<LunchBox>();
             foreach(Member member in Members)
             {
-                foreach(LunchBox l in this.FindAllLunchboxes(member))
+                foreach(LunchBox l in this.FindAllLunchBoxes(member))
                 {
                     if(member.Equals(l.Member))
                     {
-                        lunchboxes.Add(l);
+                        lunchBoxes.Add(l);
                     }
                 }
             }
-            return lunchboxes;
+            return lunchBoxes;
         }
 
-        public List<LunchBox> FindLunchboxByCityAndCategory(String city, String foodCategory, Member m)
+        public List<LunchBox> FindLunchBoxByCityAndCategory(string city, string foodCategory, Member m)
         {
-           List<LunchBox> lunchboxes = new List<LunchBox>();
-            foreach(LunchBox l in FindLunchboxByCity(city, m))
+           List<LunchBox> lunchBoxes = new List<LunchBox>();
+            foreach(LunchBox l in FindLunchBoxByCity(city, m))
             {
                 if (l.FoodCategory.Equals(foodCategory))
                 {
-                    lunchboxes.Add(l);
+                    lunchBoxes.Add(l);
                 }
             }
-            return lunchboxes;
+            return lunchBoxes;
         }
        
 
@@ -301,6 +301,8 @@ namespace LS.DAL
                 throw ex;
             }
         }
+
+        //Member_MeetUp
         public List<MeetUp> FindMembersMeetUps(Member m)
         {
             List<MeetUp_Member> listMeetUpMembers = this.FindAllMeetUp_Members();
@@ -344,6 +346,8 @@ namespace LS.DAL
             }
             
         }
+
+        //Rating
         public void AddRating(Rating r)
         {
             try
@@ -399,9 +403,5 @@ namespace LS.DAL
 
             return grade;
         }
-
-
-
-
     }
 }

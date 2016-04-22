@@ -72,6 +72,19 @@ namespace LS.Controller
                 throw ex;
             }
         }
+
+        public List<Member> FindAllMembersExceptUser(Member m)
+        {
+            try
+            {
+                return lsa.FindAllMembersExpectUser(m);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public List<Member> FindMemberByCity(string city, Member m)
         {
             try
@@ -84,12 +97,12 @@ namespace LS.Controller
             }
         }
 
-        //Lunchbox
-        public LunchBox FindLunchbox(long lunchBoxId)
+        //LunchBox
+        public LunchBox FindLunchBox(long lunchBoxId)
         {
             try
             {
-                return lsa.FindLunchbox(lunchBoxId);
+                return lsa.FindLunchBox(lunchBoxId);
             }
             catch (Exception ex)
             {
@@ -97,11 +110,11 @@ namespace LS.Controller
             }
         }
 
-        public void AddLunchbox(LunchBox l)
+        public void AddLunchBox(LunchBox l)
         {
             try
             {
-                lsa.AddLunchbox(l);
+                lsa.AddLunchBox(l);
             }
             catch (Exception ex)
             {
@@ -109,11 +122,11 @@ namespace LS.Controller
             }
         }
 
-        public void DeleteLunchbox(long lunchBoxId)
+        public void DeleteLunchBox(long lunchBoxId)
         {
             try
             {
-                lsa.DeleteLunchbox(lunchBoxId);
+                lsa.DeleteLunchBox(lunchBoxId);
             }
             catch (Exception ex)
             {
@@ -121,11 +134,11 @@ namespace LS.Controller
             }
         }
 
-        public void UpdateLunchbox(long lunchBoxId, int quantity)
+        public void UpdateLunchBox(long lunchBoxId, int quantity)
         {
             try
             {
-                lsa.UpdateLunchbox(lunchBoxId, quantity);
+                lsa.UpdateLunchBox(lunchBoxId, quantity);
             }
             catch (Exception ex)
             {
@@ -133,11 +146,11 @@ namespace LS.Controller
             }
         }
 
-        public List<LunchBox> FindAllLunchboxes(Member m)
+        public List<LunchBox> FindAllLunchBoxes(Member m)
         {
             try
             {
-                return lsa.FindAllLunchboxes(m);
+                return lsa.FindAllLunchBoxes(m);
             }
             catch (Exception ex)
             {
@@ -145,11 +158,11 @@ namespace LS.Controller
             }
         }
 
-        public List<LunchBox> FindMembersLunchboxes(Member m)
+        public List<LunchBox> FindMembersLunchBoxes(Member m)
         {
             try
             {
-                return lsa.FindMembersLunchboxes(m);
+                return lsa.FindMembersLunchBoxes(m);
             }
             catch (Exception ex)
             {
@@ -157,11 +170,11 @@ namespace LS.Controller
             }
         }
 
-        public List<LunchBox> FindLunchboxByFoodCategory(string foodCategory, Member m)
+        public List<LunchBox> FindLunchBoxByFoodCategory(string foodCategory, Member m)
         {
             try
             {
-                return lsa.FindLunchboxByFoodCategory(foodCategory, m);
+                return lsa.FindLunchBoxByFoodCategory(foodCategory, m);
             }
             catch (Exception ex)
             {
@@ -169,11 +182,11 @@ namespace LS.Controller
             }
         }
 
-        public List<string> FindAllLunchboxesCitys()
+        public List<string> FindAllLunchBoxesCitys()
         {
             try
             {
-                return lsa.FindAllLunchboxesCitys();
+                return lsa.FindAllLunchBoxesCitys();
             }
             catch (Exception ex)
             {
@@ -181,11 +194,11 @@ namespace LS.Controller
             }
         }
 
-        public List<LunchBox> FindLunchboxByCity(string city, Member m)
+        public List<LunchBox> FindLunchBoxByCity(string city, Member m)
         {
             try
             {
-                return lsa.FindLunchboxByCity(city, m);
+                return lsa.FindLunchBoxByCity(city, m);
             }
             catch (Exception ex)
             {
@@ -193,11 +206,11 @@ namespace LS.Controller
             }
         }
 
-        public List<LunchBox> FindLunchboxByCityAndCategory(String city, String foodCategory, Member m)
+        public List<LunchBox> FindLunchBoxByCityAndCategory(String city, String foodCategory, Member m)
         {
             try
             {
-                return lsa.FindLunchboxByCityAndCategory(city, foodCategory, m);
+                return lsa.FindLunchBoxByCityAndCategory(city, foodCategory, m);
             }
             catch (Exception ex)
             {

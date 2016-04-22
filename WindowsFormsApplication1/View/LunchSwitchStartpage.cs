@@ -25,29 +25,9 @@ namespace LS.View
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelAlreadyAMemeber_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxUsernameStartpage_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonRegisterStartpage_Click(object sender, EventArgs e)
         {
-            labelRegisterMessage.Text = "";
+            labelRegisterMessageStartpage.Text = "";
 
             string registerUserid = textBoxUsernameStartpage.Text;
             string registerPassword = textBoxPasswordStartpage.Text;
@@ -56,9 +36,7 @@ namespace LS.View
             string registerEmail = textBoxEmailStartpage.Text;
             string registerCity = textBoxCityStartpage.Text;
             string registerDescription = textBoxDescripstionStartpage.Text;
-
-
-            string registerUserId = textBoxUsernameStartpageAlreadyAMember.Text;
+            string registerUserId = textBoxUsernameAlreadyAMemberStartpage.Text;
 
 
             if (CheckAllRegisterTextBoxes())
@@ -71,28 +49,20 @@ namespace LS.View
                     LunchSwitchProgram lunchSwitchProgram = new LunchSwitchProgram(m.MemberId);
                     this.Visible = false;
                     lunchSwitchProgram.Visible = true;
-
                 }
                 catch (Exception ex)
                 {
-                    labelRegisterMessage.Text = handleException.HandleExceptions(ex);
+                    labelRegisterMessageStartpage.Text = handleException.HandleExceptions(ex);
                 }
-
-
             }
-
-        }
-
-        private void groupBoxRegisterStartpage_Enter(object sender, EventArgs e)
-        {
 
         }
 
         private void buttonLoginStartpage_Click(object sender, EventArgs e)
         {
-            labelLogInMessage.Text = "";
-            string logInMemberId = textBoxUsernameStartpageAlreadyAMember.Text;
-            string logInPassword = textBoxPasswordStartpageAlreadyAMember.Text;
+            labelLogInMessageStartpage.Text = "";
+            string logInMemberId = textBoxUsernameAlreadyAMemberStartpage.Text;
+            string logInPassword = textBoxPasswordAlreadyAMemberStartpage.Text;
 
             if (CheckAllLogInTextBoxes())
             {
@@ -108,41 +78,18 @@ namespace LS.View
                 }
                 catch (Exception ex)
                 {
-                    labelLogInMessage.Text = handleException.HandleExceptions(ex);
+                    labelLogInMessageStartpage.Text = handleException.HandleExceptions(ex);
 
                 }
             }
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxUsernameStartpageAlreadyAMember_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPasswordStartpageAldreadyAMember_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxNameStartpage_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void ClearAllTextBoxesStartPage()
-        {
-
-        }
         private bool CheckAllLogInTextBoxes()
         {
-            if (string.IsNullOrWhiteSpace(textBoxUsernameStartpageAlreadyAMember.Text) || string.IsNullOrWhiteSpace(textBoxPasswordStartpageAlreadyAMember.Text))
+            if (string.IsNullOrWhiteSpace(textBoxUsernameAlreadyAMemberStartpage.Text) || string.IsNullOrWhiteSpace(textBoxPasswordAlreadyAMemberStartpage.Text))
             {
-                labelLogInMessage.Text = "Please fill in all fields";
+                labelLogInMessageStartpage.Text = "Please fill in all fields";
                 return false;
             }
             else
@@ -152,25 +99,19 @@ namespace LS.View
         }
         private bool CheckAllRegisterTextBoxes()
         {
-
-
             if (string.IsNullOrWhiteSpace(textBoxUsernameStartpage.Text) || string.IsNullOrWhiteSpace(textBoxPasswordStartpage.Text)
                 || string.IsNullOrWhiteSpace(textBoxEmailStartpage.Text) || string.IsNullOrWhiteSpace(textBoxCityStartpage.Text)
                 || string.IsNullOrWhiteSpace(textBoxDescripstionStartpage.Text) || string.IsNullOrWhiteSpace(textBoxPhoneStartpage.Text)
                 || string.IsNullOrWhiteSpace(textBoxNameStartpage.Text))
             {
 
-                labelRegisterMessage.Text = "Please fill in all fields";
+                labelRegisterMessageStartpage.Text = "Please fill in all fields";
                 return false;
             }
             else
             {
                 return true;
             }
-
-
         }
-
-
     }
 }

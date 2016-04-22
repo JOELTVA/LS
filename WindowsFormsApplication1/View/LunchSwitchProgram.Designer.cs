@@ -40,9 +40,9 @@ namespace LS.View
             this.labelAverageRatingMyaccount = new System.Windows.Forms.Label();
             this.buttonRemoveMeetupMyAccount = new System.Windows.Forms.Button();
             this.buttonRemoveLunchboxMyAccont = new System.Windows.Forms.Button();
-            this.buttonMinusQuanityMyAccount = new System.Windows.Forms.Button();
+            this.buttonMinusQuantityMyAccount = new System.Windows.Forms.Button();
             this.labelQuantityChangeMyAccount = new System.Windows.Forms.Label();
-            this.buttonPlusQuanitMyAccount = new System.Windows.Forms.Button();
+            this.buttonPlusQuantityMyAccount = new System.Windows.Forms.Button();
             this.buttonSaveAndUpdateMyAccount = new System.Windows.Forms.Button();
             this.groupBoxAddLunchboxMyAccount = new System.Windows.Forms.GroupBox();
             this.labelAddALunchboxMessage = new System.Windows.Forms.Label();
@@ -134,9 +134,9 @@ namespace LS.View
             this.tabPageMyAccount.Controls.Add(this.labelAverageRatingMyaccount);
             this.tabPageMyAccount.Controls.Add(this.buttonRemoveMeetupMyAccount);
             this.tabPageMyAccount.Controls.Add(this.buttonRemoveLunchboxMyAccont);
-            this.tabPageMyAccount.Controls.Add(this.buttonMinusQuanityMyAccount);
+            this.tabPageMyAccount.Controls.Add(this.buttonMinusQuantityMyAccount);
             this.tabPageMyAccount.Controls.Add(this.labelQuantityChangeMyAccount);
-            this.tabPageMyAccount.Controls.Add(this.buttonPlusQuanitMyAccount);
+            this.tabPageMyAccount.Controls.Add(this.buttonPlusQuantityMyAccount);
             this.tabPageMyAccount.Controls.Add(this.buttonSaveAndUpdateMyAccount);
             this.tabPageMyAccount.Controls.Add(this.groupBoxAddLunchboxMyAccount);
             this.tabPageMyAccount.Controls.Add(this.textBoxDescriptionMyAccount);
@@ -154,9 +154,9 @@ namespace LS.View
             this.tabPageMyAccount.Controls.Add(this.labelMyAccount);
             this.tabPageMyAccount.Controls.Add(this.buttonLogOutMyAccount);
             this.tabPageMyAccount.Location = new System.Drawing.Point(10, 63);
-            this.tabPageMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPageMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.tabPageMyAccount.Name = "tabPageMyAccount";
-            this.tabPageMyAccount.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPageMyAccount.Padding = new System.Windows.Forms.Padding(5);
             this.tabPageMyAccount.Size = new System.Drawing.Size(3612, 1820);
             this.tabPageMyAccount.TabIndex = 1;
             this.tabPageMyAccount.Text = "My Account";
@@ -203,7 +203,7 @@ namespace LS.View
             // 
             this.textBoxCityMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCityMyAccount.Location = new System.Drawing.Point(397, 889);
-            this.textBoxCityMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxCityMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxCityMyAccount.Name = "textBoxCityMyAccount";
             this.textBoxCityMyAccount.Size = new System.Drawing.Size(380, 53);
             this.textBoxCityMyAccount.TabIndex = 15;
@@ -225,7 +225,7 @@ namespace LS.View
             // 
             this.textBoxAverageRatingMyAccount.Enabled = false;
             this.textBoxAverageRatingMyAccount.Location = new System.Drawing.Point(643, 1352);
-            this.textBoxAverageRatingMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxAverageRatingMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxAverageRatingMyAccount.Name = "textBoxAverageRatingMyAccount";
             this.textBoxAverageRatingMyAccount.Size = new System.Drawing.Size(137, 53);
             this.textBoxAverageRatingMyAccount.TabIndex = 24;
@@ -245,7 +245,7 @@ namespace LS.View
             // buttonRemoveMeetupMyAccount
             // 
             this.buttonRemoveMeetupMyAccount.Location = new System.Drawing.Point(2363, 1357);
-            this.buttonRemoveMeetupMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonRemoveMeetupMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.buttonRemoveMeetupMyAccount.Name = "buttonRemoveMeetupMyAccount";
             this.buttonRemoveMeetupMyAccount.Size = new System.Drawing.Size(280, 76);
             this.buttonRemoveMeetupMyAccount.TabIndex = 22;
@@ -256,7 +256,7 @@ namespace LS.View
             // buttonRemoveLunchboxMyAccont
             // 
             this.buttonRemoveLunchboxMyAccont.Location = new System.Drawing.Point(2363, 839);
-            this.buttonRemoveLunchboxMyAccont.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonRemoveLunchboxMyAccont.Margin = new System.Windows.Forms.Padding(5);
             this.buttonRemoveLunchboxMyAccont.Name = "buttonRemoveLunchboxMyAccont";
             this.buttonRemoveLunchboxMyAccont.Size = new System.Drawing.Size(277, 67);
             this.buttonRemoveLunchboxMyAccont.TabIndex = 21;
@@ -264,15 +264,16 @@ namespace LS.View
             this.buttonRemoveLunchboxMyAccont.UseVisualStyleBackColor = true;
             this.buttonRemoveLunchboxMyAccont.Click += new System.EventHandler(this.buttonRemoveLunchboxMyaccont_Click);
             // 
-            // buttonMinusQuanityMyAccount
+            // buttonMinusQuantityMyAccount
             // 
-            this.buttonMinusQuanityMyAccount.Location = new System.Drawing.Point(2243, 839);
-            this.buttonMinusQuanityMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.buttonMinusQuanityMyAccount.Name = "buttonMinusQuanityMyAccount";
-            this.buttonMinusQuanityMyAccount.Size = new System.Drawing.Size(56, 69);
-            this.buttonMinusQuanityMyAccount.TabIndex = 20;
-            this.buttonMinusQuanityMyAccount.Text = "-";
-            this.buttonMinusQuanityMyAccount.UseVisualStyleBackColor = true;
+            this.buttonMinusQuantityMyAccount.Location = new System.Drawing.Point(2243, 839);
+            this.buttonMinusQuantityMyAccount.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonMinusQuantityMyAccount.Name = "buttonMinusQuantityMyAccount";
+            this.buttonMinusQuantityMyAccount.Size = new System.Drawing.Size(56, 69);
+            this.buttonMinusQuantityMyAccount.TabIndex = 20;
+            this.buttonMinusQuantityMyAccount.Text = "-";
+            this.buttonMinusQuantityMyAccount.UseVisualStyleBackColor = true;
+            this.buttonMinusQuantityMyAccount.Click += new System.EventHandler(this.buttonMinusQuanityMyAccount_Click);
             // 
             // labelQuantityChangeMyAccount
             // 
@@ -286,21 +287,22 @@ namespace LS.View
             this.labelQuantityChangeMyAccount.TabIndex = 19;
             this.labelQuantityChangeMyAccount.Text = "Quantity:";
             // 
-            // buttonPlusQuanitMyAccount
+            // buttonPlusQuantityMyAccount
             // 
-            this.buttonPlusQuanitMyAccount.Location = new System.Drawing.Point(2176, 837);
-            this.buttonPlusQuanitMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.buttonPlusQuanitMyAccount.Name = "buttonPlusQuanitMyAccount";
-            this.buttonPlusQuanitMyAccount.Size = new System.Drawing.Size(56, 69);
-            this.buttonPlusQuanitMyAccount.TabIndex = 18;
-            this.buttonPlusQuanitMyAccount.Text = "+";
-            this.buttonPlusQuanitMyAccount.UseVisualStyleBackColor = true;
+            this.buttonPlusQuantityMyAccount.Location = new System.Drawing.Point(2176, 837);
+            this.buttonPlusQuantityMyAccount.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonPlusQuantityMyAccount.Name = "buttonPlusQuantityMyAccount";
+            this.buttonPlusQuantityMyAccount.Size = new System.Drawing.Size(56, 69);
+            this.buttonPlusQuantityMyAccount.TabIndex = 18;
+            this.buttonPlusQuantityMyAccount.Text = "+";
+            this.buttonPlusQuantityMyAccount.UseVisualStyleBackColor = true;
+            this.buttonPlusQuantityMyAccount.Click += new System.EventHandler(this.buttonPlusQuanitMyAccount_Click);
             // 
             // buttonSaveAndUpdateMyAccount
             // 
             this.buttonSaveAndUpdateMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaveAndUpdateMyAccount.Location = new System.Drawing.Point(144, 1159);
-            this.buttonSaveAndUpdateMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonSaveAndUpdateMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSaveAndUpdateMyAccount.Name = "buttonSaveAndUpdateMyAccount";
             this.buttonSaveAndUpdateMyAccount.Size = new System.Drawing.Size(643, 76);
             this.buttonSaveAndUpdateMyAccount.TabIndex = 17;
@@ -323,9 +325,9 @@ namespace LS.View
             this.groupBoxAddLunchboxMyAccount.Controls.Add(this.buttonAddLunchboxMyAccount);
             this.groupBoxAddLunchboxMyAccount.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxAddLunchboxMyAccount.Location = new System.Drawing.Point(2704, 353);
-            this.groupBoxAddLunchboxMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxAddLunchboxMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.groupBoxAddLunchboxMyAccount.Name = "groupBoxAddLunchboxMyAccount";
-            this.groupBoxAddLunchboxMyAccount.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxAddLunchboxMyAccount.Padding = new System.Windows.Forms.Padding(5);
             this.groupBoxAddLunchboxMyAccount.Size = new System.Drawing.Size(864, 1023);
             this.groupBoxAddLunchboxMyAccount.TabIndex = 18;
             this.groupBoxAddLunchboxMyAccount.TabStop = false;
@@ -346,7 +348,7 @@ namespace LS.View
             // 
             this.textBoxContentAddALunchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxContentAddALunchBox.Location = new System.Drawing.Point(387, 274);
-            this.textBoxContentAddALunchBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxContentAddALunchBox.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxContentAddALunchBox.Name = "textBoxContentAddALunchBox";
             this.textBoxContentAddALunchBox.Size = new System.Drawing.Size(407, 53);
             this.textBoxContentAddALunchBox.TabIndex = 14;
@@ -355,7 +357,7 @@ namespace LS.View
             // 
             this.textBoxQuantityAddALunchBoxMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxQuantityAddALunchBoxMyAccount.Location = new System.Drawing.Point(387, 184);
-            this.textBoxQuantityAddALunchBoxMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxQuantityAddALunchBoxMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxQuantityAddALunchBoxMyAccount.Name = "textBoxQuantityAddALunchBoxMyAccount";
             this.textBoxQuantityAddALunchBoxMyAccount.Size = new System.Drawing.Size(407, 53);
             this.textBoxQuantityAddALunchBoxMyAccount.TabIndex = 13;
@@ -364,7 +366,7 @@ namespace LS.View
             // 
             this.textBoxNameAddALunchBoxMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNameAddALunchBoxMyAccount.Location = new System.Drawing.Point(387, 95);
-            this.textBoxNameAddALunchBoxMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxNameAddALunchBoxMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxNameAddALunchBoxMyAccount.Name = "textBoxNameAddALunchBoxMyAccount";
             this.textBoxNameAddALunchBoxMyAccount.Size = new System.Drawing.Size(407, 53);
             this.textBoxNameAddALunchBoxMyAccount.TabIndex = 12;
@@ -382,7 +384,7 @@ namespace LS.View
             "Chicken",
             "Fish"});
             this.comboBoxFoodCategoryMyAccount.Location = new System.Drawing.Point(387, 379);
-            this.comboBoxFoodCategoryMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.comboBoxFoodCategoryMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.comboBoxFoodCategoryMyAccount.Name = "comboBoxFoodCategoryMyAccount";
             this.comboBoxFoodCategoryMyAccount.Size = new System.Drawing.Size(407, 46);
             this.comboBoxFoodCategoryMyAccount.TabIndex = 5;
@@ -435,7 +437,7 @@ namespace LS.View
             // 
             this.buttonAddLunchboxMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddLunchboxMyAccount.Location = new System.Drawing.Point(160, 644);
-            this.buttonAddLunchboxMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonAddLunchboxMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.buttonAddLunchboxMyAccount.Name = "buttonAddLunchboxMyAccount";
             this.buttonAddLunchboxMyAccount.Size = new System.Drawing.Size(459, 98);
             this.buttonAddLunchboxMyAccount.TabIndex = 0;
@@ -447,7 +449,7 @@ namespace LS.View
             // 
             this.textBoxDescriptionMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescriptionMyAccount.Location = new System.Drawing.Point(144, 1052);
-            this.textBoxDescriptionMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxDescriptionMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxDescriptionMyAccount.Name = "textBoxDescriptionMyAccount";
             this.textBoxDescriptionMyAccount.Size = new System.Drawing.Size(633, 53);
             this.textBoxDescriptionMyAccount.TabIndex = 16;
@@ -456,7 +458,7 @@ namespace LS.View
             // 
             this.textBoxEmailMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmailMyAccount.Location = new System.Drawing.Point(397, 794);
-            this.textBoxEmailMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxEmailMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxEmailMyAccount.Name = "textBoxEmailMyAccount";
             this.textBoxEmailMyAccount.Size = new System.Drawing.Size(380, 53);
             this.textBoxEmailMyAccount.TabIndex = 14;
@@ -465,7 +467,7 @@ namespace LS.View
             // 
             this.textBoxPhoneMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPhoneMyAccount.Location = new System.Drawing.Point(397, 701);
-            this.textBoxPhoneMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxPhoneMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxPhoneMyAccount.Name = "textBoxPhoneMyAccount";
             this.textBoxPhoneMyAccount.Size = new System.Drawing.Size(380, 53);
             this.textBoxPhoneMyAccount.TabIndex = 13;
@@ -474,7 +476,7 @@ namespace LS.View
             // 
             this.textBoxNameMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNameMyAccount.Location = new System.Drawing.Point(397, 599);
-            this.textBoxNameMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxNameMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxNameMyAccount.Name = "textBoxNameMyAccount";
             this.textBoxNameMyAccount.Size = new System.Drawing.Size(380, 53);
             this.textBoxNameMyAccount.TabIndex = 12;
@@ -484,7 +486,7 @@ namespace LS.View
             this.textBoxUsernameMyAccount.Enabled = false;
             this.textBoxUsernameMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsernameMyAccount.Location = new System.Drawing.Point(397, 503);
-            this.textBoxUsernameMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxUsernameMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxUsernameMyAccount.Name = "textBoxUsernameMyAccount";
             this.textBoxUsernameMyAccount.Size = new System.Drawing.Size(380, 53);
             this.textBoxUsernameMyAccount.TabIndex = 11;
@@ -589,7 +591,7 @@ namespace LS.View
             // 
             this.buttonLogOutMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogOutMyAccount.Location = new System.Drawing.Point(3160, 76);
-            this.buttonLogOutMyAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonLogOutMyAccount.Margin = new System.Windows.Forms.Padding(5);
             this.buttonLogOutMyAccount.Name = "buttonLogOutMyAccount";
             this.buttonLogOutMyAccount.Size = new System.Drawing.Size(344, 105);
             this.buttonLogOutMyAccount.TabIndex = 0;
@@ -613,9 +615,9 @@ namespace LS.View
             this.tabPageFindPage.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.tabPageFindPage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPageFindPage.Location = new System.Drawing.Point(10, 63);
-            this.tabPageFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPageFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.tabPageFindPage.Name = "tabPageFindPage";
-            this.tabPageFindPage.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPageFindPage.Padding = new System.Windows.Forms.Padding(5);
             this.tabPageFindPage.Size = new System.Drawing.Size(3612, 1820);
             this.tabPageFindPage.TabIndex = 0;
             this.tabPageFindPage.Text = "Findpage";
@@ -693,9 +695,9 @@ namespace LS.View
             this.groupBoxFindALunchboxLunchboxesFindpage.Controls.Add(this.comboBoxCityFindPage);
             this.groupBoxFindALunchboxLunchboxesFindpage.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxFindALunchboxLunchboxesFindpage.Location = new System.Drawing.Point(88, 60);
-            this.groupBoxFindALunchboxLunchboxesFindpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxFindALunchboxLunchboxesFindpage.Margin = new System.Windows.Forms.Padding(5);
             this.groupBoxFindALunchboxLunchboxesFindpage.Name = "groupBoxFindALunchboxLunchboxesFindpage";
-            this.groupBoxFindALunchboxLunchboxesFindpage.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxFindALunchboxLunchboxesFindpage.Padding = new System.Windows.Forms.Padding(5);
             this.groupBoxFindALunchboxLunchboxesFindpage.Size = new System.Drawing.Size(1755, 975);
             this.groupBoxFindALunchboxLunchboxesFindpage.TabIndex = 9;
             this.groupBoxFindALunchboxLunchboxesFindpage.TabStop = false;
@@ -721,7 +723,7 @@ namespace LS.View
             // 
             this.buttonSearchForLunchFindpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearchForLunchFindpage.Location = new System.Drawing.Point(1013, 236);
-            this.buttonSearchForLunchFindpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonSearchForLunchFindpage.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSearchForLunchFindpage.Name = "buttonSearchForLunchFindpage";
             this.buttonSearchForLunchFindpage.Size = new System.Drawing.Size(197, 76);
             this.buttonSearchForLunchFindpage.TabIndex = 8;
@@ -745,7 +747,7 @@ namespace LS.View
             this.comboBoxFoodPreferencesFindPage.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFoodPreferencesFindPage.FormattingEnabled = true;
             this.comboBoxFoodPreferencesFindPage.Location = new System.Drawing.Point(488, 119);
-            this.comboBoxFoodPreferencesFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.comboBoxFoodPreferencesFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.comboBoxFoodPreferencesFindPage.Name = "comboBoxFoodPreferencesFindPage";
             this.comboBoxFoodPreferencesFindPage.Size = new System.Drawing.Size(476, 62);
             this.comboBoxFoodPreferencesFindPage.TabIndex = 2;
@@ -777,7 +779,7 @@ namespace LS.View
             this.comboBoxCityFindPage.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCityFindPage.FormattingEnabled = true;
             this.comboBoxCityFindPage.Location = new System.Drawing.Point(488, 241);
-            this.comboBoxCityFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.comboBoxCityFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.comboBoxCityFindPage.Name = "comboBoxCityFindPage";
             this.comboBoxCityFindPage.Size = new System.Drawing.Size(476, 62);
             this.comboBoxCityFindPage.TabIndex = 4;
@@ -808,9 +810,9 @@ namespace LS.View
             this.groupBoxFriendsProfilFindpage.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxFriendsProfilFindpage.ForeColor = System.Drawing.Color.Black;
             this.groupBoxFriendsProfilFindpage.Location = new System.Drawing.Point(1939, 60);
-            this.groupBoxFriendsProfilFindpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxFriendsProfilFindpage.Margin = new System.Windows.Forms.Padding(5);
             this.groupBoxFriendsProfilFindpage.Name = "groupBoxFriendsProfilFindpage";
-            this.groupBoxFriendsProfilFindpage.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxFriendsProfilFindpage.Padding = new System.Windows.Forms.Padding(5);
             this.groupBoxFriendsProfilFindpage.Size = new System.Drawing.Size(1544, 1550);
             this.groupBoxFriendsProfilFindpage.TabIndex = 8;
             this.groupBoxFriendsProfilFindpage.TabStop = false;
@@ -846,7 +848,7 @@ namespace LS.View
             // 
             this.buttonRateFindpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRateFindpage.Location = new System.Drawing.Point(808, 1393);
-            this.buttonRateFindpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonRateFindpage.Margin = new System.Windows.Forms.Padding(5);
             this.buttonRateFindpage.Name = "buttonRateFindpage";
             this.buttonRateFindpage.Size = new System.Drawing.Size(171, 83);
             this.buttonRateFindpage.TabIndex = 17;
@@ -859,7 +861,7 @@ namespace LS.View
             this.textBoxDescriptionFindPage.Enabled = false;
             this.textBoxDescriptionFindPage.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescriptionFindPage.Location = new System.Drawing.Point(355, 799);
-            this.textBoxDescriptionFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxDescriptionFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxDescriptionFindPage.Name = "textBoxDescriptionFindPage";
             this.textBoxDescriptionFindPage.Size = new System.Drawing.Size(732, 60);
             this.textBoxDescriptionFindPage.TabIndex = 16;
@@ -869,7 +871,7 @@ namespace LS.View
             this.textBoxEmailFindPage.Enabled = false;
             this.textBoxEmailFindPage.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmailFindPage.Location = new System.Drawing.Point(355, 708);
-            this.textBoxEmailFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxEmailFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxEmailFindPage.Name = "textBoxEmailFindPage";
             this.textBoxEmailFindPage.Size = new System.Drawing.Size(732, 60);
             this.textBoxEmailFindPage.TabIndex = 15;
@@ -879,7 +881,7 @@ namespace LS.View
             this.textBoxMobileFindPage.Enabled = false;
             this.textBoxMobileFindPage.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMobileFindPage.Location = new System.Drawing.Point(355, 618);
-            this.textBoxMobileFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxMobileFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxMobileFindPage.Name = "textBoxMobileFindPage";
             this.textBoxMobileFindPage.Size = new System.Drawing.Size(732, 60);
             this.textBoxMobileFindPage.TabIndex = 14;
@@ -889,7 +891,7 @@ namespace LS.View
             this.textBoxFullNameFindPage.Enabled = false;
             this.textBoxFullNameFindPage.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFullNameFindPage.Location = new System.Drawing.Point(352, 520);
-            this.textBoxFullNameFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxFullNameFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxFullNameFindPage.Name = "textBoxFullNameFindPage";
             this.textBoxFullNameFindPage.Size = new System.Drawing.Size(732, 60);
             this.textBoxFullNameFindPage.TabIndex = 13;
@@ -899,7 +901,7 @@ namespace LS.View
             this.textBoxUsernameFindPage.Enabled = false;
             this.textBoxUsernameFindPage.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsernameFindPage.Location = new System.Drawing.Point(355, 420);
-            this.textBoxUsernameFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxUsernameFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxUsernameFindPage.Name = "textBoxUsernameFindPage";
             this.textBoxUsernameFindPage.Size = new System.Drawing.Size(732, 60);
             this.textBoxUsernameFindPage.TabIndex = 12;
@@ -909,7 +911,7 @@ namespace LS.View
             this.comboBoxRateFriendFindpage.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRateFriendFindpage.FormattingEnabled = true;
             this.comboBoxRateFriendFindpage.Location = new System.Drawing.Point(429, 1409);
-            this.comboBoxRateFriendFindpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.comboBoxRateFriendFindpage.Margin = new System.Windows.Forms.Padding(5);
             this.comboBoxRateFriendFindpage.Name = "comboBoxRateFriendFindpage";
             this.comboBoxRateFriendFindpage.Size = new System.Drawing.Size(351, 66);
             this.comboBoxRateFriendFindpage.TabIndex = 11;
@@ -940,7 +942,7 @@ namespace LS.View
             // 
             this.buttonSearchForAFriendFindpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearchForAFriendFindpage.Location = new System.Drawing.Point(896, 119);
-            this.buttonSearchForAFriendFindpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonSearchForAFriendFindpage.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSearchForAFriendFindpage.Name = "buttonSearchForAFriendFindpage";
             this.buttonSearchForAFriendFindpage.Size = new System.Drawing.Size(192, 76);
             this.buttonSearchForAFriendFindpage.TabIndex = 9;
@@ -964,7 +966,7 @@ namespace LS.View
             this.comboBoxUsernameFindPage.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUsernameFindPage.FormattingEnabled = true;
             this.comboBoxUsernameFindPage.Location = new System.Drawing.Point(408, 134);
-            this.comboBoxUsernameFindPage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.comboBoxUsernameFindPage.Margin = new System.Windows.Forms.Padding(5);
             this.comboBoxUsernameFindPage.Name = "comboBoxUsernameFindPage";
             this.comboBoxUsernameFindPage.Size = new System.Drawing.Size(457, 62);
             this.comboBoxUsernameFindPage.TabIndex = 6;
@@ -1039,7 +1041,7 @@ namespace LS.View
             // 
             this.buttonMakeASwitchFindpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMakeASwitchFindpage.Location = new System.Drawing.Point(1184, 1483);
-            this.buttonMakeASwitchFindpage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonMakeASwitchFindpage.Margin = new System.Windows.Forms.Padding(5);
             this.buttonMakeASwitchFindpage.Name = "buttonMakeASwitchFindpage";
             this.buttonMakeASwitchFindpage.Size = new System.Drawing.Size(469, 86);
             this.buttonMakeASwitchFindpage.TabIndex = 9;
@@ -1053,7 +1055,7 @@ namespace LS.View
             this.tabControl.Controls.Add(this.tabPageMyAccount);
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.Location = new System.Drawing.Point(0, -2);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(5);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(3632, 1893);
@@ -1068,7 +1070,7 @@ namespace LS.View
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(3501, 1655);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "LunchSwitchProgram";
             this.Text = "Lunch Switch";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1139,9 +1141,9 @@ namespace LS.View
         private System.Windows.Forms.Label labelQuantityMyAccount;
         private System.Windows.Forms.Label labelContentMyAccount;
         private System.Windows.Forms.Button buttonSaveAndUpdateMyAccount;
-        private System.Windows.Forms.Button buttonMinusQuanityMyAccount;
+        private System.Windows.Forms.Button buttonMinusQuantityMyAccount;
         private System.Windows.Forms.Label labelQuantityChangeMyAccount;
-        private System.Windows.Forms.Button buttonPlusQuanitMyAccount;
+        private System.Windows.Forms.Button buttonPlusQuantityMyAccount;
         private System.Windows.Forms.Button buttonRemoveMeetupMyAccount;
         private System.Windows.Forms.Button buttonRemoveLunchboxMyAccont;
         private System.Windows.Forms.Label labelRateFriendFindPage;
