@@ -398,7 +398,7 @@ namespace LS.DAL
             }
             catch (Exception ex)
             {
-                throw ex;
+                return grade;
             }
 
             return grade;

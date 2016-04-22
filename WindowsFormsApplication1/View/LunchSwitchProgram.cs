@@ -16,7 +16,7 @@ namespace LS.View
     public partial class LunchSwitchProgram : Form
     {
 
-        public Member member = new Member();
+        private Member member = new Member();
         private string lunchBoxIdMyAccount;
         private string meetUpIdMyAccount;
         private string lunchBoxIdSearch;
@@ -37,20 +37,7 @@ namespace LS.View
         }
 
         //REMOVE??
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void buttonLogOutMyaccount_Click(object sender, EventArgs e)
@@ -76,7 +63,7 @@ namespace LS.View
             try
             {
                 controller.DeleteLunchBox(Convert.ToInt64(lunchBoxIdMyAccount));
-                dataGridViewLunchBoxesMyAccount.DataSource = controller.FindAllLunchBoxes(member);
+                dataGridViewLunchBoxesMyAccount.DataSource = controller.FindMembersLunchBoxes(member);
 
             }
             catch (Exception ex)
@@ -360,7 +347,7 @@ namespace LS.View
                 {
                     LunchBox l = new LunchBox(name, content, foodCategory, 2, member);
                     controller.AddLunchBox(l);
-                    dataGridViewLunchBoxesMyAccount.DataSource = controller.FindAllLunchBoxes(member);
+                    dataGridViewLunchBoxesMyAccount.DataSource = controller.FindMembersLunchBoxes(member);
                     FormatLunchBoxesMyAccount();
                     ClearAllMyAccountLunchBox();
 
@@ -394,7 +381,7 @@ namespace LS.View
             }
             catch (Exception ex)
             {
-                //ska inte throwas
+                handleException.HandleExceptions(ex);
             }
 
         }
@@ -410,7 +397,7 @@ namespace LS.View
             }
             catch (Exception ex)
             {
-                //ska inte slängas
+                handleException.HandleExceptions(ex);
             }
 
         }
@@ -547,7 +534,7 @@ namespace LS.View
             }
             catch (Exception ex)
             {
-                //ska inte throwas
+                handleException.HandleExceptions(ex);
             }
         }
 
@@ -562,7 +549,7 @@ namespace LS.View
             }
             catch (Exception ex)
             {
-                //ska inte throwas
+                handleException.HandleExceptions(ex);
             }
 
         }
@@ -578,7 +565,7 @@ namespace LS.View
             }
             catch (Exception ex)
             {
-                //ska inte throwas
+                handleException.HandleExceptions(ex);
             }
         }
 
@@ -599,7 +586,7 @@ namespace LS.View
             LunchBox friendLb = controller.FindLunchBox(Convert.ToInt64(lunchBoxIdMyAccount));
             int quantity = friendLb.Quantity + 1;
             controller.UpdateLunchBox(friendLb.LunchBoxId, quantity);
-            dataGridViewLunchBoxesMyAccount.DataSource = controller.FindAllLunchBoxes(member);
+            dataGridViewLunchBoxesMyAccount.DataSource = controller.FindMembersLunchBoxes(member);
             //dataGridViewLunchBoxesMyAccount.Update();
             //dataGridViewLunchBoxesMyAccount.Refresh();
         }
@@ -609,7 +596,7 @@ namespace LS.View
             LunchBox friendLb = controller.FindLunchBox(Convert.ToInt64(lunchBoxIdMyAccount));
             int quantity = friendLb.Quantity - 1;
             controller.UpdateLunchBox(friendLb.LunchBoxId, quantity);
-            dataGridViewLunchBoxesMyAccount.DataSource = controller.FindAllLunchBoxes(member);
+            dataGridViewLunchBoxesMyAccount.DataSource = controller.FindMembersLunchBoxes(member);
             //dataGridViewLunchBoxesMyAccount.Update();
             //dataGridViewLunchBoxesMyAccount.Refresh();
         }
