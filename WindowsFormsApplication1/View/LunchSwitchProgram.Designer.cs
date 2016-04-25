@@ -160,7 +160,6 @@ namespace LS.View
             this.tabPageMyAccount.Size = new System.Drawing.Size(1354, 761);
             this.tabPageMyAccount.TabIndex = 1;
             this.tabPageMyAccount.Text = "My Account";
-           
             // 
             // dataGridViewMyMeetUpsMyAccount
             // 
@@ -1064,7 +1063,7 @@ namespace LS.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Orange;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources._13063966_10207597473429430_50071259_o;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(954, 472);
