@@ -43,12 +43,19 @@ namespace LS.View
             {
                 try
                 {
-                    Member m = new Member(registerUserid, registerPassword, registerFullName, registerMobile,
-                        registerEmail, registerCity, registerDescription);
-                    controller.AddMember(m);
-                    LunchSwitchProgram lunchSwitchProgram = new LunchSwitchProgram(m.MemberId);
-                    this.Visible = false;
-                    lunchSwitchProgram.Visible = true;
+                    if (controller.FindMember(registerUserid) == null)
+                    {
+                        Member m = new Member(registerUserid, registerPassword, registerFullName, registerMobile,
+                            registerEmail, registerCity, registerDescription);
+                        controller.AddMember(m);
+                        LunchSwitchProgram lunchSwitchProgram = new LunchSwitchProgram(m.MemberId);
+                        this.Visible = false;
+                        lunchSwitchProgram.Visible = true;
+                    }
+                    else
+                    {
+                        labelRegisterMessageStartpage.Text = "The userid is occupied, please try another one";
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -75,11 +82,14 @@ namespace LS.View
                         this.Visible = false;
                         lunchSwitchProgram.Visible = true;
                     }
+                    else
+                    {
+                        labelLogInMessageStartpage.Text = "The password or userid is incorrect";
+                    }
                 }
                 catch (Exception ex)
                 {
                     labelLogInMessageStartpage.Text = handleException.HandleExceptions(ex);
-
                 }
             }
 
