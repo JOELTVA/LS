@@ -621,7 +621,6 @@ namespace LS.View
             this.tabPageFindPage.Size = new System.Drawing.Size(3612, 1820);
             this.tabPageFindPage.TabIndex = 0;
             this.tabPageFindPage.Text = "Findpage";
-            this.tabPageFindPage.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // labelMakeASwitchMessageFindPage
             // 
