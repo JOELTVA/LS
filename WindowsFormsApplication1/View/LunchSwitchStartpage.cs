@@ -45,8 +45,10 @@ namespace LS.View
                 {
                     if (controller.FindMember(registerUserid) == null)
                     {
-                        Member m = new Member(registerUserid, registerPassword, registerFullName, registerMobile,
-                            registerEmail, registerCity, registerDescription);
+
+                  
+                        Member m = new Member(registerUserid, registerCity, registerDescription, registerEmail,
+                            registerFullName, registerMobile, registerPassword);
                         controller.AddMember(m);
                         LunchSwitchProgram lunchSwitchProgram = new LunchSwitchProgram(m.MemberId);
                         this.Visible = false;
@@ -84,12 +86,12 @@ namespace LS.View
                     }
                     else
                     {
-                        labelLogInMessageStartpage.Text = "The password or userid is incorrect";
+                        toolStripStatusLabelLunchSwitch.Text = "The password or userid is incorrect";
                     }
                 }
                 catch (Exception ex)
                 {
-                    labelLogInMessageStartpage.Text = handleException.HandleExceptions(ex);
+                    toolStripStatusLabelLunchSwitch.Text = handleException.HandleExceptions(ex);
                 }
             }
 
@@ -99,7 +101,7 @@ namespace LS.View
         {
             if (string.IsNullOrWhiteSpace(textBoxUsernameAlreadyAMemberStartpage.Text) || string.IsNullOrWhiteSpace(textBoxPasswordAlreadyAMemberStartpage.Text))
             {
-                labelLogInMessageStartpage.Text = "Please fill in all fields";
+                toolStripStatusLabelLunchSwitch.Text = "Please fill in all fields";
                 return false;
             }
             else
@@ -115,7 +117,7 @@ namespace LS.View
                 || string.IsNullOrWhiteSpace(textBoxNameStartpage.Text))
             {
 
-                labelRegisterMessageStartpage.Text = "Please fill in all fields";
+                toolStripStatusLabelLunchSwitch.Text = "Please fill in all fields";
                 return false;
             }
             else

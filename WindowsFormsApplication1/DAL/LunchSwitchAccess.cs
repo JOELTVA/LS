@@ -103,7 +103,7 @@ namespace LS.DAL
         {
             try
             {
-                List<Member> listMember = (from u in db.Members where u.City == city && u != m select u).ToList();
+                List<Member> listMember = (from u in db.Members where u.City == city && u.MemberId != m.MemberId select u).ToList();
                 return listMember;
             }
             catch (Exception ex)
@@ -198,7 +198,7 @@ namespace LS.DAL
         {
             try
             {
-                List<LunchBox> listLunchBox = (from l in db.LunchBoxes where l.FoodCategory == foodCategory && l.Member != m select l).ToList();
+                List<LunchBox> listLunchBox = (from l in db.LunchBoxes where l.FoodCategory == foodCategory && l.MemberId != m.MemberId select l).ToList();
                 return listLunchBox;
             }
             catch (Exception ex)
@@ -220,16 +220,15 @@ namespace LS.DAL
 
         public List<LunchBox> FindLunchBoxByCity(string city, Member m)
         {
-            List<Member> Members = this.FindMemberByCity(city, m);
-            List<LunchBox> lunchBoxes = new List<LunchBox>();
+            List<LunchBox> lunchBoxes = new List<LunchBox>(); 
+            List<Member> Members = this.FindMemberByCity(city, m);     
             foreach(Member member in Members)
             {
-                foreach(LunchBox l in this.FindAllLunchBoxes(member))
+                foreach(LunchBox l in FindMembersLunchBoxes(member))
                 {
-                    if(member.Equals(l.Member))
-                    {
+                    
                         lunchBoxes.Add(l);
-                    }
+                  
                 }
             }
             return lunchBoxes;
