@@ -8,11 +8,11 @@ using LS.Exceptions;
 
 namespace LS.DAL
 {
-   public class LunchSwitchAccess
+    public class LunchSwitchAccess
     {
 
 
-        LunchSwitchEDM db = new LunchSwitchEDM();
+        private LunchSwitchEDM db = new LunchSwitchEDM();
 
         //Member
         public Member FindMember(string memberId)
@@ -90,7 +90,7 @@ namespace LS.DAL
         {
             try
             {
-                List<Member> listMembers = (from u in db.Members where u != m select u).ToList();
+                List<Member> listMembers = (from u in db.Members where u.MemberId != m.MemberId select u).ToList();
                 return listMembers;
             }
             catch (Exception ex)
@@ -211,24 +211,30 @@ namespace LS.DAL
         {
             List<string> cities = new List<string>();
             List<Member> Members = this.FindAllMembers();
-            foreach(Member m in Members)
+            HashSet<string> citiesHash = new HashSet<string>();
+
+            foreach (Member m in Members)
             {
-                cities.Add(m.City);
+                citiesHash.Add(m.City);
+
             }
+
+            cities = citiesHash.ToList();
             return cities;
+
         }
 
         public List<LunchBox> FindLunchBoxByCity(string city, Member m)
         {
-            List<LunchBox> lunchBoxes = new List<LunchBox>(); 
-            List<Member> Members = this.FindMemberByCity(city, m);     
-            foreach(Member member in Members)
+            List<LunchBox> lunchBoxes = new List<LunchBox>();
+            List<Member> Members = this.FindMemberByCity(city, m);
+            foreach (Member member in Members)
             {
-                foreach(LunchBox l in FindMembersLunchBoxes(member))
+                foreach (LunchBox l in FindMembersLunchBoxes(member))
                 {
-                    
-                        lunchBoxes.Add(l);
-                  
+
+                    lunchBoxes.Add(l);
+
                 }
             }
             return lunchBoxes;
@@ -236,8 +242,8 @@ namespace LS.DAL
 
         public List<LunchBox> FindLunchBoxByCityAndCategory(string city, string foodCategory, Member m)
         {
-           List<LunchBox> lunchBoxes = new List<LunchBox>();
-            foreach(LunchBox l in FindLunchBoxByCity(city, m))
+            List<LunchBox> lunchBoxes = new List<LunchBox>();
+            foreach (LunchBox l in FindLunchBoxByCity(city, m))
             {
                 if (l.FoodCategory.Equals(foodCategory))
                 {
@@ -246,7 +252,7 @@ namespace LS.DAL
             }
             return lunchBoxes;
         }
-       
+
 
         //Meetup
         public MeetUp FindMeetup(long meetupId)
@@ -309,7 +315,7 @@ namespace LS.DAL
             List<MeetUp> membersMeetUps = new List<MeetUp>();
             foreach (MeetUp_Member meetUpMember in listMeetUpMembers)
             {
-                foreach (MeetUp meetUp in listMeetUps) 
+                foreach (MeetUp meetUp in listMeetUps)
                 {
                     if (meetUp.MeetUpId == meetUpMember.MeetUpId && meetUpMember.MemberId == m.MemberId)
                     {
@@ -319,31 +325,50 @@ namespace LS.DAL
             }
             return membersMeetUps;
         }
-   
-        public void AddMeetUp_Member(MeetUp_Member mm)
+
+        public void AddMeetUp_Member(MeetUp_Member mm, int meetUpId)
         {
             try
             {
-                db.MeetUp_Members.Add(mm);
-                db.SaveChanges();
+
+                int count = 0;
+                List<MeetUp_Member> mmList = this.FindAllMeetUp_Members();
+                foreach (MeetUp_Member mmTemp in mmList)
+                {
+
+                    if (mmTemp.MeetUpId.Equals(meetUpId))
+                    {
+
+                        count++;
+
+                    }
+                }
+                if (count < 2)
+                {
+                    db.MeetUp_Members.Add(mm);
+                    db.SaveChanges();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+
+        }
+        public List<MeetUp_Member> FindAllMeetUp_Members()
+        {
+            try
+            {
+                List<MeetUp_Member> listMeetUpMembers = (from mm in db.MeetUp_Members select mm).ToList();
+                return listMeetUpMembers;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-        }
-        public List<MeetUp_Member> FindAllMeetUp_Members()
-        {   try
-            {
-                List<MeetUp_Member> listMeetUpMembers = (from mm in db.MeetUp_Members select mm).ToList();
-                return listMeetUpMembers;     
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            
         }
 
         //Rating
@@ -382,7 +407,7 @@ namespace LS.DAL
             Decimal grade = 0;
             try
             {
-                
+
                 List<Rating> allRatings = this.FindAllRatings();
                 foreach (Rating r in allRatings)
                 {
@@ -401,6 +426,32 @@ namespace LS.DAL
             }
 
             return grade;
+        }
+
+        public Member FindFriendInMeetUp(MeetUp mU, Member m)
+        {
+            List<MeetUp_Member> meetUpMembers = this.FindAllMeetUp_Members();
+
+
+            foreach (MeetUp_Member mUM in meetUpMembers)
+            {
+                if (mUM.MeetUpId.Equals(mU.MeetUpId) && !mUM.MemberId.Equals(m.MemberId))
+                {
+                    try
+                    {
+                        Member friend = this.FindMember(mUM.MemberId);
+                        return friend;
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
+
+            }
+            return null;
+
+
         }
     }
 }

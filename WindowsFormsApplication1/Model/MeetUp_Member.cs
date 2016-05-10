@@ -22,6 +22,6 @@ namespace LS.Model
         public virtual int MeetUpId { get; set; }
         public virtual Member Member { get; set; }
         public virtual MeetUp MeetUp { get; set; }
-        
+
     }
 }

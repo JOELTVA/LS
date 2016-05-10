@@ -7,10 +7,10 @@ using LS.Model;
 
 namespace LS.Controller
 {
-   public class LunchSwitchController
+    public class LunchSwitchController
     {
 
-        DAL.LunchSwitchAccess lsa = new DAL.LunchSwitchAccess(); //ska gå via LunchSwitchAccess i DAL istället och LunchSwitchAccess kallar på LunchSwitchEDM
+        private DAL.LunchSwitchAccess lsa = new DAL.LunchSwitchAccess();
 
         //Member
         public Member FindMember(string memberId)
@@ -55,7 +55,8 @@ namespace LS.Controller
             try
             {
                 lsa.UpdateMember(memberId, fullName, city, email, mobileNr, description);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -288,11 +289,11 @@ namespace LS.Controller
                 throw ex;
             }
         }
-        public void AddMeetUp_Member(MeetUp_Member mm)
+        public void AddMeetUp_Member(MeetUp_Member mm, int meetUpId)
         {
             try
             {
-                lsa.AddMeetUp_Member(mm);
+                lsa.AddMeetUp_Member(mm, meetUpId);
             }
             catch (Exception ex)
             {
@@ -317,11 +318,11 @@ namespace LS.Controller
             try
             {
                 return lsa.FindAllRatings();
-            } 
+            }
             catch (Exception ex)
             {
                 throw ex;
-            } 
+            }
 
         }
         public Decimal FindMemberRating(Member m)
@@ -335,7 +336,18 @@ namespace LS.Controller
                 throw ex;
             }
         }
+        public Member FindFriendInMeetUp(MeetUp mU, Member m)
+        {
+            try
+            {
+                return lsa.FindFriendInMeetUp(mU, m);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
+        }
 
     }
 }

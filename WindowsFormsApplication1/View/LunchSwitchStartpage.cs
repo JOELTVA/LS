@@ -16,8 +16,7 @@ namespace LS.View
     public partial class LunchSwitchStartpage : Form
 
     {
-        LunchSwitchController controller = new LunchSwitchController();
-        HandleException handleException = new HandleException();
+        private LunchSwitchController controller = new LunchSwitchController();
 
         public LunchSwitchStartpage()
         {
@@ -25,12 +24,15 @@ namespace LS.View
             this.WindowState = FormWindowState.Maximized;
         }
 
+        //Registers (creates) the new member if all information is filled in correctly
+        // and passes it on as the current member
         private void buttonRegisterStartpage_Click(object sender, EventArgs e)
         {
-            labelRegisterMessageStartpage.Text = "";
+            toolStripStatusLabelLunchSwitch.Text = "";
 
             string registerUserid = textBoxUsernameStartpage.Text;
             string registerPassword = textBoxPasswordStartpage.Text;
+            string retypePassword = textBoxRetypePassword.Text;
             string registerFullName = textBoxNameStartpage.Text;
             string registerMobile = textBoxPhoneStartpage.Text;
             string registerEmail = textBoxEmailStartpage.Text;
@@ -38,35 +40,41 @@ namespace LS.View
             string registerDescription = textBoxDescripstionStartpage.Text;
             string registerUserId = textBoxUsernameAlreadyAMemberStartpage.Text;
 
-
             if (CheckAllRegisterTextBoxes())
             {
-                try
+                if (registerPassword.Equals(retypePassword))
                 {
-                    if (controller.FindMember(registerUserid) == null)
+                    try
                     {
 
-                  
-                        Member m = new Member(registerUserid, registerCity, registerDescription, registerEmail,
-                            registerFullName, registerMobile, registerPassword);
-                        controller.AddMember(m);
-                        LunchSwitchProgram lunchSwitchProgram = new LunchSwitchProgram(m.MemberId);
-                        this.Visible = false;
-                        lunchSwitchProgram.Visible = true;
+                        if (controller.FindMember(registerUserid) == null)
+                        {
+                            Member m = new Member(registerUserid, registerCity, registerDescription, registerEmail,
+                                registerFullName, registerMobile, registerPassword);
+                            controller.AddMember(m);
+                            LunchSwitchProgram lunchSwitchProgram = new LunchSwitchProgram(m.MemberId);
+                            this.Visible = false;
+                            lunchSwitchProgram.Visible = true;
+                        }
+                        else
+                        {
+                            toolStripStatusLabelLunchSwitch.Text = "The userid is occupied, please try another one";
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        labelRegisterMessageStartpage.Text = "The userid is occupied, please try another one";
+                        toolStripStatusLabelLunchSwitch.Text = ExceptionHandler.HandleExceptions(ex);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    labelRegisterMessageStartpage.Text = handleException.HandleExceptions(ex);
+                    toolStripStatusLabelLunchSwitch.Text = "The specified passwords do not match";
                 }
             }
 
         }
 
+        //Logs in the member if the log in details are correct and passes it on as the current member
         private void buttonLoginStartpage_Click(object sender, EventArgs e)
         {
             labelLogInMessageStartpage.Text = "";
@@ -86,17 +94,18 @@ namespace LS.View
                     }
                     else
                     {
-                        toolStripStatusLabelLunchSwitch.Text = "The password or userid is incorrect";
+                        toolStripStatusLabelLunchSwitch.Text = "The password is incorrect";
                     }
                 }
                 catch (Exception ex)
                 {
-                    toolStripStatusLabelLunchSwitch.Text = handleException.HandleExceptions(ex);
+                    toolStripStatusLabelLunchSwitch.Text = ExceptionHandler.HandleExceptions(ex);
                 }
             }
 
         }
 
+        //Checks that the member has filled in the textboxes for logging in
         private bool CheckAllLogInTextBoxes()
         {
             if (string.IsNullOrWhiteSpace(textBoxUsernameAlreadyAMemberStartpage.Text) || string.IsNullOrWhiteSpace(textBoxPasswordAlreadyAMemberStartpage.Text))
@@ -109,6 +118,8 @@ namespace LS.View
                 return true;
             }
         }
+
+        //Checks that the new member has filled in all fields before registering
         private bool CheckAllRegisterTextBoxes()
         {
             if (string.IsNullOrWhiteSpace(textBoxUsernameStartpage.Text) || string.IsNullOrWhiteSpace(textBoxPasswordStartpage.Text)
